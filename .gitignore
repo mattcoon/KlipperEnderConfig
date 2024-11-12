@@ -1,0 +1,7 @@
+*.gcode
+*.nc
+*.log
+.thumbs/*
+logs/*
+gcodes/*
+printer-*.cfg

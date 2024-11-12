@@ -1,4 +1,4 @@
--------------------- Log Start | Sun Oct  6 04:00:13 2024 --------------------
+-------------------- Log Start | Mon Nov 11 23:06:13 2024 --------------------
 platform: Linux-6.1.21-v8+-aarch64-with-glibc2.31
 data_path: /home/coon/printer_data
 is_default_data_path: False
@@ -12,7 +12,7 @@ is_backup_config: False
 is_python_package: True
 instance_uuid: 60bd5132ee8047c38040f1158d95415a
 unix_socket_path: /home/coon/printer_data/comms/moonraker.sock
-software_version: v0.9.3-0-g71f9e67
+software_version: v0.9.3-1-g4e00a07
 git_branch: master
 git_remote: origin
 git_repo_url: https://github.com/Arksine/moonraker.git
@@ -57,6 +57,10 @@ trusted_clients =
 [announcements]
 subscriptions = 
 	octoapp.
+
+[spoolman]
+server = http://192.168.50.51:7912
+sync_rate = 5
 
 [update_manager]
 refresh_interval = 168
@@ -125,6 +129,16 @@ install_script = install.sh
 managed_services = 
 	moonraker-obico
 
+[update_manager mobileraker]
+install_script = /home/coon/mobileraker_companion/scripts/install.sh
+requirements = /home/coon/mobileraker_companion/scripts/mobileraker-requirements.txt
+env = /home/coon/mobileraker-env/bin/python
+managed_services = mobileraker
+primary_branch = main
+origin = https://github.com/Clon1998/mobileraker_companion.git
+path = /home/coon/mobileraker_companion
+type = git_repo
+
 #################################################################
 All Configuration Files:
 /home/coon/printer_data/config/moonraker.conf
@@ -132,7 +146,7 @@ All Configuration Files:
 /home/coon/printer_data/config/moonraker-obico-update.cfg
 #################################################################
 Loading Sqlite database provider. Sqlite Version: 3.34.1
-Unsafe Shutdown Count: 14
+Unsafe Shutdown Count: 23
 
 System Info:
 
@@ -145,10 +159,10 @@ System Info:
   bits: 64bit
   processor: aarch64
   cpu_desc: 
-  serial_number: 3f152626
+  serial_number: 10000000ccc1f00f
   hardware_desc: BCM2835
-  model: Raspberry Pi 3 Model B Rev 1.2
-  total_memory: 931432
+  model: Raspberry Pi 4 Model B Rev 1.5
+  total_memory: 1893592
   memory_units: kB
 
 ***sd_info***
@@ -192,6 +206,7 @@ System Info:
   octoeverywhere
   ratos-configurator
   octoapp
+  mobileraker
 Found libcamera Python module, version: v0.0.5+83-bde9b04f
 
 Systemd unit moonraker.service:
@@ -199,8 +214,8 @@ unit_name: moonraker.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['network-online.target', 'system.slice', 'sysinit.target']
-**After=['basic.target', 'network-online.target', 'system.slice', 'klipper.service', 'sysinit.target', 'systemd-journald.socket']
+**Requires=['sysinit.target', 'network-online.target', 'system.slice']
+**After=['basic.target', 'sysinit.target', 'network-online.target', 'system.slice', 'klipper.service', 'systemd-journald.socket']
 **SupplementaryGroups=['moonraker-admin']
 **EnvironmentFiles=/home/coon/printer_data/systemd/moonraker.env
 **ExecStart=/home/coon/moonraker-env/bin/python $MOONRAKER_ARGS
@@ -208,15 +223,14 @@ Properties:
 **FragmentPath=/etc/systemd/system/moonraker.service
 **Description=API Server for Klipper SV1
 **User=coon
-CPU Throttled Flags: ['Under-Voltage Detected', 'Currently Throttled', 'Previously Under-Volted', 'Previously Throttled']
 
 Systemd unit klipper.service:
 unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['system.slice', 'sysinit.target', '-.mount']
-**After=['system.slice', 'systemd-journald.socket', 'basic.target', '-.mount', 'sysinit.target', 'network-online.target']
+**Requires=['sysinit.target', '-.mount', 'system.slice']
+**After=['systemd-journald.socket', 'network-online.target', 'sysinit.target', '-.mount', 'basic.target', 'system.slice']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/coon/printer_data/systemd/klipper.env
 **ExecStart=/home/coon/klippy-env/bin/python $KLIPPER_ARGS
@@ -224,6 +238,7 @@ Properties:
 **FragmentPath=/etc/systemd/system/klipper.service
 **Description=Klipper 3D Printer Firmware SV1
 **User=coon
+Connected to Spoolman Spool Manager
 Git Repo moonraker: Warnings detected:
   Repo has untracked source files: ['moonraker/components/timelapse.py']
 Git Repo klipper: No warnings detected
@@ -234,71 +249,434 @@ Git Repo octoapp: Warnings detected:
   Repo not on offical remote/branch, expected: origin/master, detected: origin/release
 Git Repo Klipper-Adaptive-Meshing-Purging: No warnings detected
 Git Repo moonraker-obico: No warnings detected
-Klipper Version: v0.12.0-310-gef7534686
-2024-10-06 00:00:12,997 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.50.115
-2024-10-06 00:15:16,807 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 00:45:16,717 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 00:55:13,013 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.50.102
-2024-10-06 01:15:16,645 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 01:45:16,616 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 02:15:16,638 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 02:45:16,647 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 03:15:16,584 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 03:28:31,706 [websockets.py:write_to_socket()] - Websocket closed while writing: 548549941568
-2024-10-06 03:28:36,681 [websockets.py:on_close()] - Websocket Closed: ID: 548549941568 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
-2024-10-06 03:45:16,632 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 03:46:25,164 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.50.115
-2024-10-06 03:46:25,170 [application.py:log_request()] - 101 GET /websocket (192.168.50.115) [_TRUSTED_USER_] 10.47ms
-2024-10-06 03:46:25,171 [websockets.py:open()] - Websocket Opened: ID: 548549939312, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15, Host Name: enderpi.local
-2024-10-06 03:46:25,494 [websockets.py:_handle_identify()] - Websocket 548549939312 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2024-10-06 04:15:16,729 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 04:45:16,851 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 04:50:13,072 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.50.115
-2024-10-06 05:15:16,639 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 05:45:16,773 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 06:15:16,610 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 06:45:16,754 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 07:12:35,344 [websockets.py:write_to_socket()] - Websocket closed while writing: 548549939312
-2024-10-06 07:12:40,175 [websockets.py:on_close()] - Websocket Closed: ID: 548549939312 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
-2024-10-06 07:15:16,619 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 07:29:27,012 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.50.115
-2024-10-06 07:29:27,016 [application.py:log_request()] - 101 GET /websocket (192.168.50.115) [_TRUSTED_USER_] 8.39ms
-2024-10-06 07:29:27,018 [websockets.py:open()] - Websocket Opened: ID: 548548424800, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15, Host Name: enderpi.local
-2024-10-06 07:29:27,186 [websockets.py:_handle_identify()] - Websocket 548548424800 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2024-10-06 07:33:07,211 [websockets.py:write_to_socket()] - Websocket closed while writing: 548548424800
-2024-10-06 07:33:12,022 [websockets.py:on_close()] - Websocket Closed: ID: 548548424800 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.94
-2024-10-06 07:45:16,630 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 07:48:29,080 [application.py:log_request()] - 101 GET /websocket (192.168.50.115) [_TRUSTED_USER_] 4.89ms
-2024-10-06 07:48:29,081 [websockets.py:open()] - Websocket Opened: ID: 548551004992, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15, Host Name: enderpi.local
-2024-10-06 07:48:29,222 [websockets.py:_handle_identify()] - Websocket 548551004992 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2024-10-06 07:49:19,237 [websockets.py:write_to_socket()] - Websocket closed while writing: 548551004992
-2024-10-06 07:49:24,086 [websockets.py:on_close()] - Websocket Closed: ID: 548551004992 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.87
-2024-10-06 07:57:03,163 [application.py:log_request()] - 101 GET /websocket (192.168.50.115) [_TRUSTED_USER_] 5.77ms
-2024-10-06 07:57:03,164 [websockets.py:open()] - Websocket Opened: ID: 548551005232, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15, Host Name: enderpi.local
-2024-10-06 07:57:03,186 [websockets.py:_handle_identify()] - Websocket 548551005232 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2024-10-06 07:58:03,366 [websockets.py:write_to_socket()] - Websocket closed while writing: 548551005232
-2024-10-06 07:58:08,169 [websockets.py:on_close()] - Websocket Closed: ID: 548551005232 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.95
-2024-10-06 08:00:11,655 [application.py:log_request()] - 101 GET /websocket (192.168.50.115) [_TRUSTED_USER_] 4.77ms
-2024-10-06 08:00:11,657 [websockets.py:open()] - Websocket Opened: ID: 548551004752, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15, Host Name: enderpi.local
-2024-10-06 08:00:11,845 [websockets.py:_handle_identify()] - Websocket 548551004752 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2024-10-06 08:15:16,718 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 08:45:16,612 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 09:00:13,160 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.50.115
-2024-10-06 09:15:16,765 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
-2024-10-06 09:30:37,901 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.50.115
-2024-10-06 09:33:09,166 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper fetch origin --prune --progress) successfully finished
-2024-10-06 09:33:09,203 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper merge-base --is-ancestor HEAD origin/master) successfully finished
-2024-10-06 09:33:10,200 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper pull --progress) successfully finished
-2024-10-06 09:33:10,341 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper status --porcelain -b) successfully finished
-2024-10-06 09:33:10,386 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper branch --list --no-color) successfully finished
-2024-10-06 09:33:10,484 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper remote get-url origin) successfully finished
-2024-10-06 09:33:10,530 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper merge-base --is-ancestor HEAD origin/master) successfully finished
-2024-10-06 09:33:10,562 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper rev-parse HEAD) successfully finished
-2024-10-06 09:33:10,982 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper describe --always --tags --long --dirty --abbrev=8) successfully finished
-2024-10-06 09:33:11,069 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper rev-parse origin/master) successfully finished
-2024-10-06 09:33:11,529 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper describe origin/master --always --tags --long --abbrev=8) successfully finished
-2024-10-06 09:33:11,593 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper rev-list HEAD..96cceed23efc7a3759ecfba0a228cdcb4d5244d3 --count) successfully finished
-2024-10-06 09:33:11,598 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+Git Repo mobileraker: No warnings detected
+Klipper Version: v0.12.0-348-geeb2678ec
+2024-11-11 18:06:13,966 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.50.103
+2024-11-11 18:06:13,969 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 6.10ms
+2024-11-11 18:06:13,970 [websockets.py:open()] - Websocket Opened: ID: 548233723616, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 18:06:13,986 [websockets.py:_handle_identify()] - Websocket 548233723616 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 18:06:22,563 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 6.10ms
+2024-11-11 18:06:22,564 [websockets.py:open()] - Websocket Opened: ID: 548233890352, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 18:06:22,593 [websockets.py:_handle_identify()] - Websocket 548233890352 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 18:06:25,653 [websockets.py:on_close()] - Websocket Closed: ID: 548233890352 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.09
+2024-11-11 18:09:14,474 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 4.86ms
+2024-11-11 18:09:14,475 [websockets.py:open()] - Websocket Opened: ID: 548233657840, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 18:09:14,495 [websockets.py:_handle_identify()] - Websocket 548233657840 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 18:09:17,559 [websockets.py:on_close()] - Websocket Closed: ID: 548233657840 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.09
+2024-11-11 18:09:21,630 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-11-11 18:09:22,906 [application.py:log_request()] - 404 GET /favicon.ico (192.168.50.103) [_TRUSTED_USER_] 12.60ms
+2024-11-11 18:21:57,545 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 18:21:57,559 [websockets.py:on_close()] - Websocket Closed: ID: 548233334496 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 6.98
+2024-11-11 18:21:57,847 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:21:58,849 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:21:59,564 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2024-11-11 18:21:59,566 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 3.05ms
+2024-11-11 18:21:59,567 [websockets.py:open()] - Websocket Opened: ID: 548233752096, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:21:59,576 [websockets.py:_handle_identify()] - Websocket 548233752096 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:21:59,594 [websockets.py:on_close()] - Websocket Closed: ID: 548233752096 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 0.03
+2024-11-11 18:21:59,850 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:00,853 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:01,610 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 1.98ms
+2024-11-11 18:22:01,610 [websockets.py:open()] - Websocket Opened: ID: 548233748544, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:22:01,619 [websockets.py:_handle_identify()] - Websocket 548233748544 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:22:01,630 [websockets.py:on_close()] - Websocket Closed: ID: 548233748544 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 0.02
+2024-11-11 18:22:01,852 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:02,853 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:03,646 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 1.56ms
+2024-11-11 18:22:03,646 [websockets.py:open()] - Websocket Opened: ID: 548233656640, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:22:03,652 [websockets.py:_handle_identify()] - Websocket 548233656640 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:22:03,662 [websockets.py:on_close()] - Websocket Closed: ID: 548233656640 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 0.02
+2024-11-11 18:22:03,854 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:04,858 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:05,856 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:06,859 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:07,860 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:08,861 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:09,861 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:10,862 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:11,865 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:12,629 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 18:22:13,482 [server.py:add_log_rollover_item()] - Klipper Version: v0.12.0-349-ga34034494
+2024-11-11 18:22:15,058 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 18:22:15,062 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 18:22:15,064 [klippy_connection.py:_check_ready()] - 
+Can not update MCU 'mcu' config as it is shutdown
+Once the underlying issue is corrected, use the
+"FIRMWARE_RESTART" command to reset the firmware, reload the
+config, and restart the host software.
+Error configuring printer
+
+2024-11-11 18:22:18,532 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 18:22:18,872 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:19,794 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 18:22:21,505 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 18:22:21,506 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 18:22:21,508 [klippy_connection.py:_check_ready()] - 
+Can not update MCU 'mcu' config as it is shutdown
+Once the underlying issue is corrected, use the
+"FIRMWARE_RESTART" command to reset the firmware, reload the
+config, and restart the host software.
+Error configuring printer
+
+2024-11-11 18:22:25,226 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 18:22:25,671 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 2.26ms
+2024-11-11 18:22:25,671 [websockets.py:open()] - Websocket Opened: ID: 548214634096, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:22:25,678 [websockets.py:_handle_identify()] - Websocket 548214634096 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:22:25,686 [websockets.py:on_close()] - Websocket Closed: ID: 548214634096 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 0.02
+2024-11-11 18:22:25,880 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:22:26,489 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 18:22:27,698 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 1.61ms
+2024-11-11 18:22:27,699 [websockets.py:open()] - Websocket Opened: ID: 548214929344, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:22:27,706 [websockets.py:_handle_identify()] - Websocket 548214929344 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:22:29,184 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 18:22:29,187 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 18:22:29,434 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-11-11 18:22:29,721 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-11-11 18:22:29,746 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-11-11 18:22:30,695 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor raspberry_pi', 'temperature_sensor mcu_temp', 'heater_bed', 'extruder']
+2024-11-11 18:23:40,718 [websockets.py:on_close()] - Websocket Closed: ID: 548216007072 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.65
+2024-11-11 18:23:40,719 [websockets.py:on_close()] - Websocket Closed: ID: 548233366304 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.38
+2024-11-11 18:23:40,722 [websockets.py:on_close()] - Websocket Closed: ID: 548214929344 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.02
+2024-11-11 18:23:40,723 [websockets.py:on_close()] - Websocket Closed: ID: 548216135936 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.11
+2024-11-11 18:23:40,751 [spoolman.py:_read_messages()] - Spoolman Disconnected - Code: 1012, Reason: None, Server Ping Time Elapsed: 12.222111815000062
+2024-11-11 18:23:40,822 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-11-11 18:23:40,938 [websockets.py:write_to_socket()] - Websocket closed while writing: 548233723616
+2024-11-11 18:23:40,962 [websockets.py:on_close()] - Websocket Closed: ID: 548233723616 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 6.97
+2024-11-11 18:23:40,964 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 18:23:42,761 [server.py:main()] - Server Shutdown
+-------------------- Log Start | Mon Nov 11 23:23:59 2024 --------------------
+platform: Linux-6.1.21-v8+-aarch64-with-glibc2.31
+data_path: /home/coon/printer_data
+is_default_data_path: False
+config_file: /home/coon/printer_data/config/moonraker.conf
+backup_config: /home/coon/printer_data/config/.moonraker.conf.bkp
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: True
+instance_uuid: 60bd5132ee8047c38040f1158d95415a
+unix_socket_path: /home/coon/printer_data/comms/moonraker.sock
+software_version: v0.9.3-1-g4e00a07
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: []
+unofficial_components: []
+log_file: /home/coon/printer_data/logs/moonraker.log
+python_version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+launch_args: /home/coon/moonraker-env/bin/python /home/coon/moonraker/moonraker/__main__.py
+msgspec_enabled: False
+uvloop_enabled: False
+2024-11-11 18:23:59,664 [confighelper.py:read_file()] - Configuration File '/home/coon/printer_data/config/moonraker.conf' parsed, total size: 3902 B
+2024-11-11 18:23:59,665 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+max_upload_size = 1024
+klippy_uds_address = ~/printer_data/comms/klippy.sock
+
+[file_manager]
+enable_object_processing = True
+
+[authorization]
+cors_domains = 
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://*.local
+	http://*.lan
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[announcements]
+subscriptions = 
+	octoapp.
+
+[spoolman]
+server = http://192.168.50.51:7912
+sync_rate = 5
+
+[update_manager]
+refresh_interval = 168
+enable_auto_refresh = True
+
+[update_manager mainsail]
+type = web
+channel = stable
+repo = mainsail-crew/mainsail
+path = ~/mainsail
+
+[update_manager mainsail-config]
+type = git_repo
+primary_branch = master
+path = ~/mainsail-config
+origin = https://github.com/mainsail-crew/mainsail-config.git
+managed_services = klipper
+
+[update_manager crowsnest]
+type = git_repo
+path = ~/crowsnest
+origin = https://github.com/mainsail-crew/crowsnest.git
+managed_services = crowsnest
+install_script = tools/pkglist.sh
+
+[update_manager sonar]
+type = git_repo
+path = ~/sonar
+origin = https://github.com/mainsail-crew/sonar.git
+primary_branch = main
+managed_services = sonar
+install_script = tools/install.sh
+
+[update_manager octoapp]
+type = git_repo
+channel = beta
+path = /home/coon/octoapp
+origin = https://github.com/crysxd/OctoApp-Plugin.git
+env = /home/coon/octoapp-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	octoapp
+
+[update_manager Klipper-Adaptive-Meshing-Purging]
+type = git_repo
+channel = dev
+path = ~/Klipper-Adaptive-Meshing-Purging
+origin = https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
+managed_services = klipper
+primary_branch = main
+
+[update_manager moonraker-obico]
+type = git_repo
+path = /home/coon/moonraker-obico
+origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
+env = /home/coon/moonraker-obico/../moonraker-obico-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	moonraker-obico
+
+[update_manager mobileraker]
+install_script = /home/coon/mobileraker_companion/scripts/install.sh
+requirements = /home/coon/mobileraker_companion/scripts/mobileraker-requirements.txt
+env = /home/coon/mobileraker-env/bin/python
+managed_services = mobileraker
+primary_branch = main
+origin = https://github.com/Clon1998/mobileraker_companion.git
+path = /home/coon/mobileraker_companion
+type = git_repo
+
+#################################################################
+All Configuration Files:
+/home/coon/printer_data/config/moonraker.conf
+/home/coon/printer_data/config/octoapp-system.cfg
+/home/coon/printer_data/config/moonraker-obico-update.cfg
+#################################################################
+2024-11-11 18:23:59,976 [server.py:load_component()] - Component (secrets) loaded
+2024-11-11 18:23:59,989 [server.py:load_component()] - Component (template) loaded
+2024-11-11 18:24:00,010 [server.py:load_component()] - Component (klippy_connection) loaded
+2024-11-11 18:24:00,995 [server.py:load_component()] - Component (application) loaded
+2024-11-11 18:24:01,041 [server.py:load_component()] - Component (websockets) loaded
+2024-11-11 18:24:01,065 [server.py:add_log_rollover_item()] - Loading Sqlite database provider. Sqlite Version: 3.34.1
+2024-11-11 18:24:01,079 [server.py:add_log_rollover_item()] - Unsafe Shutdown Count: 23
+2024-11-11 18:24:01,086 [server.py:load_component()] - Component (database) loaded
+2024-11-11 18:24:01,237 [server.py:load_component()] - Component (dbus_manager) loaded
+2024-11-11 18:24:01,317 [file_manager.py:__init__()] - Using File System Observer: inotify
+2024-11-11 18:24:01,427 [server.py:load_component()] - Component (file_manager) loaded
+2024-11-11 18:24:01,481 [database.py:register_table()] - Found registered table authorized_users
+2024-11-11 18:24:01,483 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+https://my\.mainsail\.xyz
+http://my\.mainsail\.xyz
+http://.*\.local
+http://.*\.lan
+2024-11-11 18:24:01,488 [server.py:load_component()] - Component (authorization) loaded
+2024-11-11 18:24:01,498 [server.py:load_component()] - Component (klippy_apis) loaded
+2024-11-11 18:24:01,789 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 9, 2, 'final', 0)
+  version_string: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 10000000ccc1f00f
+  hardware_desc: BCM2835
+  model: Raspberry Pi 4 Model B Rev 1.5
+  total_memory: 1893592
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ad
+  manufacturer: Unknown
+  oem_id: 4c53
+  product_name: LX32G
+  product_revision: 1.0
+  serial_number: 418327f2
+  manufacturer_date: 6/2023
+  capacity: 29.5 GiB
+  total_bytes: 31719424000
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {'name': 'MainsailOS', 'version_id': '1.3.2', 'codename': 'bullseye', 'id': 'mainsailos'}
+  kernel_version: 6.1.21-v8+
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+  octoapp
+  mobileraker
+2024-11-11 18:24:01,798 [server.py:load_component()] - Component (shell_command) loaded
+2024-11-11 18:24:01,799 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2024-11-11 18:24:02,090 [server.py:add_log_rollover_item()] - Found libcamera Python module, version: v0.0.5+83-bde9b04f
+2024-11-11 18:24:02,091 [server.py:load_component()] - Component (machine) loaded
+2024-11-11 18:24:02,095 [server.py:load_component()] - Component (data_store) loaded
+2024-11-11 18:24:02,099 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
+2024-11-11 18:24:02,100 [server.py:load_component()] - Component (proc_stats) loaded
+2024-11-11 18:24:02,102 [server.py:load_component()] - Component (job_state) loaded
+2024-11-11 18:24:02,108 [server.py:load_component()] - Component (job_queue) loaded
+2024-11-11 18:24:02,112 [database.py:register_table()] - Found registered table job_history
+2024-11-11 18:24:02,113 [database.py:register_table()] - Found registered table job_totals
+2024-11-11 18:24:02,121 [server.py:load_component()] - Component (history) loaded
+2024-11-11 18:24:02,132 [server.py:load_component()] - Component (http_client) loaded
+2024-11-11 18:24:02,140 [server.py:load_component()] - Component (announcements) loaded
+2024-11-11 18:24:02,148 [server.py:load_component()] - Component (webcam) loaded
+2024-11-11 18:24:02,152 [server.py:load_component()] - Component (extensions) loaded
+2024-11-11 18:24:02,221 [base_deploy.py:log_info()] - Git Repo moonraker: Detected virtualenv: /home/coon/moonraker-env
+2024-11-11 18:24:02,226 [base_deploy.py:log_info()] - Git Repo klipper: Detected virtualenv: /home/coon/klippy-env
+2024-11-11 18:24:02,239 [base_deploy.py:log_info()] - Git Repo octoapp: Option 'env' is deprecated, use 'virtualenv' instead.
+2024-11-11 18:24:02,240 [base_deploy.py:log_info()] - Git Repo octoapp: Detected virtualenv: /home/coon/octoapp-env
+2024-11-11 18:24:02,247 [base_deploy.py:log_info()] - Git Repo moonraker-obico: Option 'env' is deprecated, use 'virtualenv' instead.
+2024-11-11 18:24:02,248 [base_deploy.py:log_info()] - Git Repo moonraker-obico: Detected virtualenv: /home/coon/moonraker-obico-env
+2024-11-11 18:24:02,252 [base_deploy.py:log_info()] - Git Repo mobileraker: Option 'env' is deprecated, use 'virtualenv' instead.
+2024-11-11 18:24:02,253 [base_deploy.py:log_info()] - Git Repo mobileraker: Detected virtualenv: /home/coon/mobileraker-env
+2024-11-11 18:24:02,261 [server.py:load_component()] - Component (update_manager) loaded
+2024-11-11 18:24:02,271 [server.py:load_component()] - Component (octoprint_compat) loaded
+2024-11-11 18:24:02,276 [announcements.py:register_feed()] - Registering feed spoolman
+2024-11-11 18:24:02,280 [server.py:load_component()] - Component (spoolman) loaded
+2024-11-11 18:24:02,282 [server.py:_initialize_component()] - Performing Component Post Init: [database]
+2024-11-11 18:24:02,303 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2024-11-11 18:24:02,318 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2024-11-11 18:24:02,780 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2024-11-11 18:24:02,859 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+2024-11-11 18:24:02,861 [machine.py:validation_init()] - Installation version in database up to date
+2024-11-11 18:24:03,198 [machine.py:check_virt_status()] - No Virtualization Detected
+2024-11-11 18:24:03,219 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.50.51
+2024-11-11 18:24:03,223 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.50.51
+2024-11-11 18:24:03,308 [server.py:add_log_rollover_item()] - 
+Systemd unit moonraker.service:
+unit_name: moonraker.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['sysinit.target', 'network-online.target', 'system.slice']
+**After=['systemd-journald.socket', 'basic.target', 'klipper.service', 'sysinit.target', 'network-online.target', 'system.slice']
+**SupplementaryGroups=['moonraker-admin']
+**EnvironmentFiles=/home/coon/printer_data/systemd/moonraker.env
+**ExecStart=/home/coon/moonraker-env/bin/python $MOONRAKER_ARGS
+**WorkingDirectory=
+**FragmentPath=/etc/systemd/system/moonraker.service
+**Description=API Server for Klipper SV1
+**User=coon
+2024-11-11 18:24:03,308 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2024-11-11 18:24:03,308 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+2024-11-11 18:24:03,317 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2024-11-11 18:24:03,325 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2024-11-11 18:24:03,325 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.50.51
+2024-11-11 18:24:03,335 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+2024-11-11 18:24:03,335 [server.py:add_log_rollover_item()] - 
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['sysinit.target', '-.mount', 'system.slice']
+**After=['systemd-journald.socket', 'network-online.target', 'sysinit.target', '-.mount', 'basic.target', 'system.slice']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/coon/printer_data/systemd/klipper.env
+**ExecStart=/home/coon/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/coon/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=coon
+2024-11-11 18:24:03,335 [server.py:_initialize_component()] - Performing Component Post Init: [update_manager]
+2024-11-11 18:24:03,339 [server.py:_initialize_component()] - Performing Component Post Init: [spoolman]
+2024-11-11 18:24:03,356 [spoolman.py:_connect_websocket()] - Connecting To Spoolman: ws://192.168.50.51:7912/api/v1/spool
+2024-11-11 18:24:03,370 [server.py:add_log_rollover_item()] - Failed to Connect to spoolman: [Errno 111] Connection refused
+2024-11-11 18:24:03,372 [update_manager.py:component_init()] - Removing stale update_manager data: fluidd
+2024-11-11 18:24:03,742 [base_deploy.py:log_info()] - PackageDeploy: PackageKit Provider Configured
+2024-11-11 18:24:03,745 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
+Owner: Arksine
+Repository Name: moonraker
+Path: /home/coon/moonraker
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Arksine/moonraker.git
+Recovery URL: https://github.com/Arksine/moonraker.git
+Current Commit SHA: 4e00a0760e756872b2fbb23a82b88dbceb383cf4
+Upstream Commit SHA: 4e00a0760e756872b2fbb23a82b88dbceb383cf4
+Current Version: v0.9.3-1-g4e00a076
+Upstream Version: v0.9.3-1-g4e00a076
+Rollback Commit: 71f9e677b81afcc6b99dd5002f595025c38edc7b
+Rollback Branch: master
+Rollback Version: v0.9.3-0-g71f9e677
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+Repo Warnings:
+  Repo has untracked source files: ['moonraker/components/timelapse.py']
+2024-11-11 18:24:03,750 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
 Owner: Klipper3d
 Repository Name: klipper
 Path: /home/coon/klipper
@@ -306,38 +684,422 @@ Remote: origin
 Branch: master
 Remote URL: https://github.com/Klipper3d/klipper.git
 Recovery URL: https://github.com/Klipper3d/klipper.git
-Current Commit SHA: 96cceed23efc7a3759ecfba0a228cdcb4d5244d3
-Upstream Commit SHA: 96cceed23efc7a3759ecfba0a228cdcb4d5244d3
-Current Version: v0.12.0-316-g96cceed2
-Upstream Version: v0.12.0-316-g96cceed2
-Rollback Commit: ef75346861fdf94d952a4e887fb843d215b00631
+Current Commit SHA: eeb2678ec2faa72af57444657b1b4f2589b77d65
+Upstream Commit SHA: a34034494ea0ed3f3e132e38e80ab03bd998c889
+Current Version: v0.12.0-348-geeb2678e
+Upstream Version: v0.12.0-349-ga3403449
+Rollback Commit: fe89c19ac0e02a5673010e9601b5a9c2f89fcf2a
 Rollback Branch: master
-Rollback Version: v0.12.0-310-gef753468
+Rollback Version: v0.12.0-325-gfe89c19a
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 1
+Diverged: False
+Pinned Commit: None
+2024-11-11 18:24:03,760 [base_deploy.py:log_info()] - Web Client mainsail: Detected
+Repo: mainsail-crew/mainsail
+Channel: stable
+Path: /home/coon/mainsail
+Local Version: v2.12.0
+Remote Version: v2.12.0
+Valid: True
+Fallback Detected: False
+Pre-release: False
+Download Url: https://github.com/mainsail-crew/mainsail/releases/download/v2.12.0/mainsail.zip
+Download Size: 2545249
+Content Type: application/zip
+Rollback Version: v2.9.1
+Rollback Repo: mainsail-crew/mainsail
+2024-11-11 18:24:03,764 [git_deploy.py:log_repo_info()] - Git Repo mainsail-config Detected:
+Owner: mainsail-crew
+Repository Name: mainsail-config
+Path: /home/coon/mainsail-config
+Remote: origin
+Branch: master
+Remote URL: https://github.com/mainsail-crew/mainsail-config.git
+Recovery URL: https://github.com/mainsail-crew/mainsail-config.git
+Current Commit SHA: e57810d51b5c634aadaca4db923bfcba269ae4b3
+Upstream Commit SHA: e57810d51b5c634aadaca4db923bfcba269ae4b3
+Current Version: v1.2.1-0-ge57810d5
+Upstream Version: v1.2.1-0-ge57810d5
+Rollback Commit: e57810d51b5c634aadaca4db923bfcba269ae4b3
+Rollback Branch: master
+Rollback Version: v1.2.1-0-ge57810d5
 Is Dirty: False
 Is Detached: False
 Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2024-10-06 09:33:11,599 [base_deploy.py:log_info()] - Git Repo klipper: Channel: dev
-2024-10-06 09:33:11,599 [base_deploy.py:log_info()] - Git Repo klipper: Validity check for git repo passed
-2024-10-06 09:33:11,902 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2024-10-06 09:33:11,945 [websockets.py:on_close()] - Websocket Closed: ID: 548549625600 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 7.36
-2024-10-06 09:33:12,403 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
-2024-10-06 09:33:13,398 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
-2024-10-06 09:33:13,987 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
-2024-10-06 09:33:13,994 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 13.26ms
-2024-10-06 09:33:13,996 [websockets.py:open()] - Websocket Opened: ID: 548550335408, Proxied: False, User Agent: , Host Name: 0.0.0.0
-2024-10-06 09:33:14,011 [websockets.py:_handle_identify()] - Websocket 548550335408 Client Identified - Name: OctoApp, Version: 2.1.5, Type: agent
-2024-10-06 09:33:14,037 [websockets.py:on_close()] - Websocket Closed: ID: 548550335408 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 0.05
-2024-10-06 09:33:14,251 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2024-10-06 09:33:16,073 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 4.09ms
-2024-10-06 09:33:16,074 [websockets.py:open()] - Websocket Opened: ID: 548551015104, Proxied: False, User Agent: , Host Name: 0.0.0.0
-2024-10-06 09:33:16,091 [websockets.py:_handle_identify()] - Websocket 548551015104 Client Identified - Name: OctoApp, Version: 2.1.5, Type: agent
-2024-10-06 09:33:16,390 [server.py:add_log_rollover_item()] - Klipper Version: v0.12.0-316-g96cceed23
-2024-10-06 09:33:18,861 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2024-10-06 09:33:18,867 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2024-10-06 09:33:18,917 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
-2024-10-06 09:33:19,106 [job_state.py:_handle_started()] - Job state initialized: standby
-2024-10-06 09:33:19,390 [klippy_connection.py:_check_ready()] - Klippy ready
-2024-10-06 09:33:19,868 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor raspberry_pi', 'temperature_sensor mcu_temp', 'heater_bed', 'extruder']
+2024-11-11 18:24:03,770 [git_deploy.py:log_repo_info()] - Git Repo crowsnest Detected:
+Owner: mainsail-crew
+Repository Name: crowsnest
+Path: /home/coon/crowsnest
+Remote: origin
+Branch: master
+Remote URL: https://github.com/mainsail-crew/crowsnest.git
+Recovery URL: https://github.com/mainsail-crew/crowsnest.git
+Current Commit SHA: d75a3aeb018384e59d03518754f6148c98894ed9
+Upstream Commit SHA: d75a3aeb018384e59d03518754f6148c98894ed9
+Current Version: v4.1.9-1-gd75a3aeb
+Upstream Version: v4.1.9-1-gd75a3aeb
+Rollback Commit: c0c9c418c8e7d6158bfd7bb51a184ab20b77d075
+Rollback Branch: master
+Rollback Version: v4.1.3-1-gc0c9c418
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+2024-11-11 18:24:03,773 [git_deploy.py:log_repo_info()] - Git Repo sonar Detected:
+Owner: mainsail-crew
+Repository Name: sonar
+Path: /home/coon/sonar
+Remote: origin
+Branch: main
+Remote URL: https://github.com/mainsail-crew/sonar.git
+Recovery URL: https://github.com/mainsail-crew/sonar.git
+Current Commit SHA: eacc498a52f79292063b6f9b0e0c191c34c5dc09
+Upstream Commit SHA: eacc498a52f79292063b6f9b0e0c191c34c5dc09
+Current Version: v0.1.3-1-geacc498a
+Upstream Version: v0.1.3-1-geacc498a
+Rollback Commit: eacc498a52f79292063b6f9b0e0c191c34c5dc09
+Rollback Branch: main
+Rollback Version: v0.1.3-1-geacc498a
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+2024-11-11 18:24:03,779 [git_deploy.py:log_repo_info()] - Git Repo octoapp Detected:
+Owner: crysxd
+Repository Name: OctoApp-Plugin
+Path: /home/coon/octoapp
+Remote: origin
+Branch: release
+Remote URL: https://github.com/crysxd/OctoApp-Plugin.git
+Recovery URL: https://github.com/crysxd/OctoApp-Plugin.git
+Current Commit SHA: 612d03c73ae0f577a9b0eae8c097fcd8e8a37a06
+Upstream Commit SHA: 612d03c73ae0f577a9b0eae8c097fcd8e8a37a06
+Current Version: 2.1.6-0-g612d03c7
+Upstream Version: 2.1.6
+Rollback Commit: 25a0c5c0b835958eb8e819389ddef87820fd738b
+Rollback Branch: release
+Rollback Version: 2.1.5-1-g25a0c5c0
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+Repo Warnings:
+  Repo not on offical remote/branch, expected: origin/master, detected: origin/release
+2024-11-11 18:24:03,785 [git_deploy.py:log_repo_info()] - Git Repo Klipper-Adaptive-Meshing-Purging Detected:
+Owner: kyleisah
+Repository Name: Klipper-Adaptive-Meshing-Purging
+Path: /home/coon/Klipper-Adaptive-Meshing-Purging
+Remote: origin
+Branch: main
+Remote URL: https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
+Recovery URL: https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
+Current Commit SHA: b0dad8ec9ee31cb644b94e39d4b8a8fb9d6c9ba0
+Upstream Commit SHA: b0dad8ec9ee31cb644b94e39d4b8a8fb9d6c9ba0
+Current Version: v1.1.2-13-gb0dad8ec
+Upstream Version: v1.1.2-13-gb0dad8ec
+Rollback Commit: b0dad8ec9ee31cb644b94e39d4b8a8fb9d6c9ba0
+Rollback Branch: main
+Rollback Version: v1.1.2-13-gb0dad8ec
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+2024-11-11 18:24:03,790 [git_deploy.py:log_repo_info()] - Git Repo moonraker-obico Detected:
+Owner: TheSpaghettiDetective
+Repository Name: moonraker-obico
+Path: /home/coon/moonraker-obico
+Remote: origin
+Branch: master
+Remote URL: https://github.com/TheSpaghettiDetective/moonraker-obico.git
+Recovery URL: https://github.com/TheSpaghettiDetective/moonraker-obico.git
+Current Commit SHA: 4c0b7b6c35d3b5a611de5731e7d1dfe10c6362df
+Upstream Commit SHA: 4c0b7b6c35d3b5a611de5731e7d1dfe10c6362df
+Current Version: v2.0.9-0-g4c0b7b6c
+Upstream Version: v2.0.9-0-g4c0b7b6c
+Rollback Commit: 4c0b7b6c35d3b5a611de5731e7d1dfe10c6362df
+Rollback Branch: master
+Rollback Version: v2.0.9-0-g4c0b7b6c
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+2024-11-11 18:24:03,797 [base_deploy.py:log_info()] - PackageKit: Next refresh in: 3 Days, 23 Hours, 54 Minutes, 46 Seconds
+2024-11-11 18:24:03,798 [base_deploy.py:log_info()] - Git Repo moonraker: Next refresh in: 6 Days, 44 Minutes, 27 Seconds
+2024-11-11 18:24:03,798 [base_deploy.py:log_info()] - Git Repo klipper: Next refresh in: 6 Days, 44 Minutes, 30 Seconds
+2024-11-11 18:24:03,799 [base_deploy.py:log_info()] - Web Client mainsail: Next refresh in: 3 Days, 23 Hours, 54 Minutes, 52 Seconds
+2024-11-11 18:24:03,799 [base_deploy.py:log_info()] - Git Repo mainsail-config: Next refresh in: 3 Days, 23 Hours, 54 Minutes, 54 Seconds
+2024-11-11 18:24:03,799 [base_deploy.py:log_info()] - Git Repo crowsnest: Next refresh in: 3 Days, 23 Hours, 54 Minutes, 55 Seconds
+2024-11-11 18:24:03,799 [base_deploy.py:log_info()] - Git Repo sonar: Next refresh in: 3 Days, 23 Hours, 54 Minutes, 56 Seconds
+2024-11-11 18:24:03,800 [base_deploy.py:log_info()] - Git Repo octoapp: Next refresh in: 4 Days, 22 Hours, 8 Minutes, 46 Seconds
+2024-11-11 18:24:03,800 [base_deploy.py:log_info()] - Git Repo Klipper-Adaptive-Meshing-Purging: Next refresh in: 3 Days, 23 Hours, 54 Minutes, 57 Seconds
+2024-11-11 18:24:03,800 [base_deploy.py:log_info()] - Git Repo moonraker-obico: Next refresh in: 3 Days, 23 Hours, 54 Minutes, 58 Seconds
+2024-11-11 18:24:03,807 [confighelper.py:create_backup()] - Backing up last working configuration to '/home/coon/printer_data/config/.moonraker.conf.bkp'
+2024-11-11 18:24:03,832 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/coon/printer_data/comms/moonraker.sock'
+2024-11-11 18:24:03,835 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: ENDERpi
+2024-11-11 18:24:03,838 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2024-11-11 18:24:03,848 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion status --porcelain -b) successfully finished
+2024-11-11 18:24:03,872 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion branch --list --no-color) successfully finished
+2024-11-11 18:24:03,906 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion remote get-url origin) successfully finished
+2024-11-11 18:24:03,928 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2024-11-11 18:24:03,946 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_API_KEY_USER_] 7.13ms
+2024-11-11 18:24:03,947 [websockets.py:open()] - Websocket Opened: ID: 547816713760, Proxied: False, User Agent: , Host Name: 127.0.0.1
+2024-11-11 18:24:04,093 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 18:24:04,164 [server.py:add_log_rollover_item()] - 
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['system.slice', '-.mount', 'sysinit.target']
+**After=['basic.target', 'system.slice', 'network-online.target', 'sysinit.target', 'systemd-journald.socket', '-.mount']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/coon/printer_data/systemd/klipper.env
+**ExecStart=/home/coon/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/coon/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=coon
+2024-11-11 18:24:04,255 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 2.46ms
+2024-11-11 18:24:04,256 [websockets.py:open()] - Websocket Opened: ID: 547816975136, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:24:04,264 [websockets.py:_handle_identify()] - Websocket 547816975136 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:24:04,419 [server.py:add_log_rollover_item()] - Klipper Version: v0.12.0-349-ga34034494
+2024-11-11 18:24:04,463 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 18:24:04,467 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 18:24:04,584 [application.py:log_request()] - 101 GET /websocket?token= (127.0.0.1) [_TRUSTED_USER_] 7.33ms
+2024-11-11 18:24:04,584 [websockets.py:open()] - Websocket Opened: ID: 547815823872, Proxied: False, User Agent: , Host Name: 127.0.0.1
+2024-11-11 18:24:04,624 [websockets.py:_handle_identify()] - Websocket 547815823872 Client Identified - Name: KlipperScreen, Version: v0.4.3-55-g7d75d39c, Type: display
+2024-11-11 18:24:04,714 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-11-11 18:24:04,927 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 14.55ms
+2024-11-11 18:24:04,928 [websockets.py:open()] - Websocket Opened: ID: 547815911968, Proxied: False, User Agent: Python/3.9 websockets/10.1, Host Name: 127.0.0.1
+2024-11-11 18:24:04,936 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion fetch origin --prune --progress) successfully finished
+2024-11-11 18:24:05,021 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion merge-base --is-ancestor HEAD origin/main) successfully finished
+2024-11-11 18:24:05,081 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion rev-parse HEAD) successfully finished
+2024-11-11 18:24:05,081 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-11-11 18:24:05,119 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-11-11 18:24:05,303 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion describe --always --tags --long --dirty --abbrev=8) successfully finished
+2024-11-11 18:24:05,364 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion rev-parse origin/main) successfully finished
+2024-11-11 18:24:05,447 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion describe origin/main --always --tags --long --abbrev=8) successfully finished
+2024-11-11 18:24:05,492 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/mobileraker_companion rev-list HEAD..034bc2b80351de0e03000f301fbf5661dd9f8af1 --count) successfully finished
+2024-11-11 18:24:05,493 [git_deploy.py:log_repo_info()] - Git Repo mobileraker Detected:
+Owner: Clon1998
+Repository Name: mobileraker_companion
+Path: /home/coon/mobileraker_companion
+Remote: origin
+Branch: main
+Remote URL: https://github.com/Clon1998/mobileraker_companion.git
+Recovery URL: https://github.com/Clon1998/mobileraker_companion.git
+Current Commit SHA: 034bc2b80351de0e03000f301fbf5661dd9f8af1
+Upstream Commit SHA: 034bc2b80351de0e03000f301fbf5661dd9f8af1
+Current Version: v0.4.0-86-g034bc2b8
+Upstream Version: v0.4.0-86-g034bc2b8
+Rollback Commit: 034bc2b80351de0e03000f301fbf5661dd9f8af1
+Rollback Branch: main
+Rollback Version: v0.4.0-86-g034bc2b8
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+2024-11-11 18:24:05,493 [base_deploy.py:log_info()] - Git Repo mobileraker: Channel: dev
+2024-11-11 18:24:05,494 [base_deploy.py:log_info()] - Git Repo mobileraker: Validity check for git repo passed
+2024-11-11 18:24:05,713 [websockets.py:_handle_identify()] - Websocket 547816713760 Client Identified - Name: Obico, Version: 2.0.9, Type: agent
+2024-11-11 18:24:05,735 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor raspberry_pi', 'temperature_sensor mcu_temp', 'heater_bed', 'extruder']
+2024-11-11 18:24:06,789 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
+2024-11-11 18:24:07,523 [server.py:add_log_rollover_item()] - Connected to Spoolman Spool Manager
+2024-11-11 18:24:07,684 [spoolman.py:_check_spool_deleted()] - Found Spool ID 13 on spoolman instance
+2024-11-11 18:24:37,414 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.50.103
+2024-11-11 18:24:37,417 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 4.78ms
+2024-11-11 18:24:37,417 [websockets.py:open()] - Websocket Opened: ID: 547817300656, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 18:24:37,866 [websockets.py:_handle_identify()] - Websocket 547817300656 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 18:26:13,483 [application.py:prepare()] - Upload Request Received from 192.168.50.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryewMOB4L9BuBeC5xr
+2024-11-11 18:26:13,501 [application.py:post()] - Processing Uploaded File: TEST_SPEED.cfg
+2024-11-11 18:26:13,511 [application.py:log_request()] - 201 POST /server/files/upload (192.168.50.103) [_TRUSTED_USER_] 30.57ms
+2024-11-11 18:27:06,968 [application.py:prepare()] - Upload Request Received from 192.168.50.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryhzvjPPbwwl9DWkFz
+2024-11-11 18:27:06,996 [application.py:post()] - Processing Uploaded File: printer.cfg
+2024-11-11 18:27:07,010 [application.py:log_request()] - 201 POST /server/files/upload (192.168.50.103) [_TRUSTED_USER_] 45.11ms
+2024-11-11 18:27:09,062 [application.py:prepare()] - Upload Request Received from 192.168.50.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryT9jKO2GMzrX9SkTJ
+2024-11-11 18:27:09,073 [application.py:post()] - Processing Uploaded File: printer.cfg
+2024-11-11 18:27:09,078 [application.py:log_request()] - 201 POST /server/files/upload (192.168.50.103) [_TRUSTED_USER_] 16.95ms
+2024-11-11 18:27:10,126 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 18:27:10,136 [websockets.py:on_close()] - Websocket Closed: ID: 547816975136 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 5.88
+2024-11-11 18:27:10,988 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:27:11,398 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 18:27:12,150 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 3.03ms
+2024-11-11 18:27:12,150 [websockets.py:open()] - Websocket Opened: ID: 547815241568, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:27:12,159 [websockets.py:_handle_identify()] - Websocket 547815241568 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:27:14,246 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 18:27:14,249 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 18:27:14,757 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-11-11 18:27:15,048 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-11-11 18:27:15,092 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-11-11 18:27:16,008 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor raspberry_pi', 'temperature_sensor mcu_temp', 'heater_bed', 'extruder']
+2024-11-11 18:27:29,185 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper fetch origin --prune --progress) successfully finished
+2024-11-11 18:27:29,200 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper merge-base --is-ancestor HEAD origin/master) successfully finished
+2024-11-11 18:27:29,686 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper pull --progress) successfully finished
+2024-11-11 18:27:29,719 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper status --porcelain -b) successfully finished
+2024-11-11 18:27:29,735 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper branch --list --no-color) successfully finished
+2024-11-11 18:27:29,763 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper remote get-url origin) successfully finished
+2024-11-11 18:27:29,778 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper merge-base --is-ancestor HEAD origin/master) successfully finished
+2024-11-11 18:27:29,798 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper rev-parse HEAD) successfully finished
+2024-11-11 18:27:29,903 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper describe --always --tags --long --dirty --abbrev=8) successfully finished
+2024-11-11 18:27:29,917 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper rev-parse origin/master) successfully finished
+2024-11-11 18:27:30,016 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper describe origin/master --always --tags --long --abbrev=8) successfully finished
+2024-11-11 18:27:30,031 [shell_command.py:_check_proc_success()] - Command (git -C /home/coon/klipper rev-list HEAD..a34034494ea0ed3f3e132e38e80ab03bd998c889 --count) successfully finished
+2024-11-11 18:27:30,032 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+Owner: Klipper3d
+Repository Name: klipper
+Path: /home/coon/klipper
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Klipper3d/klipper.git
+Recovery URL: https://github.com/Klipper3d/klipper.git
+Current Commit SHA: a34034494ea0ed3f3e132e38e80ab03bd998c889
+Upstream Commit SHA: a34034494ea0ed3f3e132e38e80ab03bd998c889
+Current Version: v0.12.0-349-ga3403449
+Upstream Version: v0.12.0-349-ga3403449
+Rollback Commit: eeb2678ec2faa72af57444657b1b4f2589b77d65
+Rollback Branch: master
+Rollback Version: v0.12.0-348-geeb2678e
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+2024-11-11 18:27:30,033 [base_deploy.py:log_info()] - Git Repo klipper: Channel: dev
+2024-11-11 18:27:30,033 [base_deploy.py:log_info()] - Git Repo klipper: Validity check for git repo passed
+2024-11-11 18:27:30,084 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 18:27:30,127 [websockets.py:on_close()] - Websocket Closed: ID: 547815241568 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 7.97
+2024-11-11 18:27:30,877 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 18:27:32,137 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 2.62ms
+2024-11-11 18:27:32,138 [websockets.py:open()] - Websocket Opened: ID: 547815321664, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:27:32,143 [websockets.py:_handle_identify()] - Websocket 547815321664 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:27:33,549 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 18:27:33,551 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 18:27:33,800 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-11-11 18:27:34,073 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-11-11 18:27:34,605 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-11-11 18:27:35,064 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor raspberry_pi', 'temperature_sensor mcu_temp', 'heater_bed', 'extruder']
+2024-11-11 18:27:43,362 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: machine.update.system, Code: 400, Message: Error updating system packages
+2024-11-11 18:33:10,032 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-11-11 18:37:06,800 [application.py:prepare()] - Upload Request Received from 192.168.50.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarydPBL7QdLCtTdKqoD
+2024-11-11 18:37:06,845 [application.py:post()] - Processing Uploaded File: printer.cfg
+2024-11-11 18:37:06,854 [application.py:log_request()] - 201 POST /server/files/upload (192.168.50.103) [_TRUSTED_USER_] 56.57ms
+2024-11-11 18:37:12,796 [application.py:prepare()] - Upload Request Received from 192.168.50.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarys4Ori4WYlC2rhmka
+2024-11-11 18:37:12,825 [application.py:post()] - Processing Uploaded File: printer.cfg
+2024-11-11 18:37:12,835 [application.py:log_request()] - 201 POST /server/files/upload (192.168.50.103) [_TRUSTED_USER_] 40.48ms
+2024-11-11 18:37:15,275 [application.py:prepare()] - Upload Request Received from 192.168.50.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryT7ukolltsKFLrEED
+2024-11-11 18:37:15,291 [application.py:post()] - Processing Uploaded File: printer.cfg
+2024-11-11 18:37:15,300 [application.py:log_request()] - 201 POST /server/files/upload (192.168.50.103) [_TRUSTED_USER_] 25.74ms
+2024-11-11 18:37:16,394 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 18:37:16,406 [websockets.py:on_close()] - Websocket Closed: ID: 547815321664 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 4.27
+2024-11-11 18:37:16,744 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:37:17,409 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 18:37:18,421 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 2.19ms
+2024-11-11 18:37:18,422 [websockets.py:open()] - Websocket Opened: ID: 547815078448, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:37:18,427 [websockets.py:_handle_identify()] - Websocket 547815078448 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:37:20,409 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 18:37:20,410 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 18:37:20,661 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-11-11 18:37:20,946 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-11-11 18:37:21,217 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-11-11 18:37:21,419 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor raspberry_pi', 'temperature_sensor mcu_temp', 'heater_bed', 'extruder']
+2024-11-11 18:38:53,538 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-11-11 18:41:09,632 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-11-11 18:44:11,448 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-11-11 18:46:17,559 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-11-11 18:47:17,561 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-11-11 18:49:24,468 [application.py:prepare()] - Upload Request Received from 192.168.50.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoTJhCsPZJDtWJGN6
+2024-11-11 18:49:24,488 [application.py:post()] - Processing Uploaded File: printer.cfg
+2024-11-11 18:49:24,501 [application.py:log_request()] - 201 POST /server/files/upload (192.168.50.103) [_TRUSTED_USER_] 35.79ms
+2024-11-11 18:49:25,559 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 18:49:25,571 [websockets.py:on_close()] - Websocket Closed: ID: 547815078448 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 7.15
+2024-11-11 18:49:25,637 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:49:26,637 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 18:49:26,837 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 18:49:27,586 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 2.97ms
+2024-11-11 18:49:27,586 [websockets.py:open()] - Websocket Opened: ID: 547815294336, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 18:49:27,591 [websockets.py:_handle_identify()] - Websocket 547815294336 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 18:49:29,589 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 18:49:29,591 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 18:49:29,841 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-11-11 18:49:30,130 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-11-11 18:49:30,146 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-11-11 18:49:30,856 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor raspberry_pi', 'temperature_sensor mcu_temp', 'heater_bed', 'extruder']
+2024-11-11 18:54:17,491 [websockets.py:write_to_socket()] - Websocket closed while writing: 547817300656
+2024-11-11 18:54:18,346 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
+2024-11-11 18:54:22,421 [websockets.py:on_close()] - Websocket Closed: ID: 547817300656 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.86
+2024-11-11 18:57:42,707 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 3.80ms
+2024-11-11 18:57:42,708 [websockets.py:open()] - Websocket Opened: ID: 547817302048, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 18:57:42,717 [websockets.py:_handle_identify()] - Websocket 547817302048 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 18:58:12,844 [websockets.py:write_to_socket()] - Websocket closed while writing: 547817302048
+2024-11-11 18:58:17,712 [websockets.py:on_close()] - Websocket Closed: ID: 547817302048 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2024-11-11 19:13:19,023 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 5.46ms
+2024-11-11 19:13:19,024 [websockets.py:open()] - Websocket Opened: ID: 547814763200, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 19:13:19,041 [websockets.py:_handle_identify()] - Websocket 547814763200 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 19:13:49,250 [websockets.py:write_to_socket()] - Websocket closed while writing: 547814763200
+2024-11-11 19:13:54,027 [websockets.py:on_close()] - Websocket Closed: ID: 547814763200 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2024-11-11 19:16:41,854 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 4.04ms
+2024-11-11 19:16:41,855 [websockets.py:open()] - Websocket Opened: ID: 547818096480, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 19:16:41,864 [websockets.py:_handle_identify()] - Websocket 547818096480 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 19:24:18,320 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
+2024-11-11 19:26:40,152 [application.py:prepare()] - Upload Request Received from 192.168.50.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary9UAt8okV0O8IlS8K
+2024-11-11 19:26:40,172 [application.py:post()] - Processing Uploaded File: printer.cfg
+2024-11-11 19:26:40,182 [application.py:log_request()] - 201 POST /server/files/upload (192.168.50.103) [_TRUSTED_USER_] 33.03ms
+2024-11-11 19:26:41,259 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-11-11 19:26:41,271 [websockets.py:on_close()] - Websocket Closed: ID: 547815294336 Close Code: 1000, Close Reason: None, Pong Time Elapsed: 3.68
+2024-11-11 19:26:41,395 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 19:26:42,395 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-11-11 19:26:42,522 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-11-11 19:26:43,286 [application.py:log_request()] - 101 GET /websocket (127.0.0.1) [_TRUSTED_USER_] 3.88ms
+2024-11-11 19:26:43,286 [websockets.py:open()] - Websocket Opened: ID: 547814970320, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2024-11-11 19:26:43,291 [websockets.py:_handle_identify()] - Websocket 547814970320 Client Identified - Name: OctoApp, Version: 2.1.6, Type: agent
+2024-11-11 19:26:45,309 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-11-11 19:26:45,310 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-11-11 19:26:45,561 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-11-11 19:26:45,846 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-11-11 19:26:46,112 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-11-11 19:26:46,569 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor raspberry_pi', 'temperature_sensor mcu_temp', 'heater_bed', 'extruder']
+2024-11-11 19:28:21,860 [websockets.py:write_to_socket()] - Websocket closed while writing: 547818096480
+2024-11-11 19:28:26,858 [websockets.py:on_close()] - Websocket Closed: ID: 547818096480 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.95
+2024-11-11 19:50:10,213 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 4.34ms
+2024-11-11 19:50:10,214 [websockets.py:open()] - Websocket Opened: ID: 547815911488, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 19:50:10,224 [websockets.py:_handle_identify()] - Websocket 547815911488 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 19:52:00,418 [websockets.py:write_to_socket()] - Websocket closed while writing: 547815911488
+2024-11-11 19:52:05,218 [websockets.py:on_close()] - Websocket Closed: ID: 547815911488 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.94
+2024-11-11 19:54:18,275 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'octoapp.': HTTP 404: Not Found
+2024-11-11 19:56:20,391 [application.py:log_request()] - 101 GET /websocket (192.168.50.103) [_TRUSTED_USER_] 2.40ms
+2024-11-11 19:56:20,391 [websockets.py:open()] - Websocket Opened: ID: 547815914656, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15, Host Name: enderpi.local
+2024-11-11 19:56:20,404 [websockets.py:_handle_identify()] - Websocket 547815914656 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2024-11-11 19:57:36,382 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-11-11 19:58:36,383 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-11-11 19:59:36,385 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2024-11-11 20:01:27,378 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-11-11 20:02:27,380 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-11-11 20:03:32,530 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-11-11 20:05:19,884 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds

@@ -2974,3 +2974,2133 @@
 [10/04/24 16:59:15] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
 [10/04/24 16:59:19] crowsnest: Starting ustreamer with Device /dev/video0 ...
 [10/04/24 16:59:20] crowsnest:  ... Done!
+[10/07/24 18:15:04] crowsnest: Shutdown or Killed by User!
+[10/07/24 18:15:04] crowsnest: Please come again :)
+[10/07/24 18:15:04] crowsnest: Goodbye...
+[10/07/24 18:15:22] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/07/24 18:15:22] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/07/24 18:15:22] crowsnest: Prepare Startup ...
+[10/07/24 18:15:22] crowsnest: INFO: Host information:
+[10/07/24 18:15:22] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/07/24 18:15:23] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/07/24 18:15:23] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/07/24 18:15:23] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/07/24 18:15:23] crowsnest: Host Info: Available CPU Cores: 4
+[10/07/24 18:15:23] crowsnest: Host Info: Available Memory: 931432 kB
+[10/07/24 18:15:23] crowsnest: Host Info: Diskspace (avail. / total): 21G / 29G
+[10/07/24 18:15:23] crowsnest: INFO: Checking Dependencies
+[10/07/24 18:15:23] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/07/24 18:15:23] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/07/24 18:15:23] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/07/24 18:15:23] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/07/24 18:15:23] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/07/24 18:15:23] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/07/24 18:15:25] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/07/24 18:15:25] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/07/24 18:15:25] crowsnest:		[crowsnest]
+[10/07/24 18:15:25] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/07/24 18:15:25] crowsnest:		log_level: verbose
+[10/07/24 18:15:25] crowsnest:		delete_log: false
+[10/07/24 18:15:25] crowsnest:		no_proxy: false
+[10/07/24 18:15:25] crowsnest:		
+[10/07/24 18:15:25] crowsnest:		[cam 1]
+[10/07/24 18:15:25] crowsnest:		mode: ustreamer
+[10/07/24 18:15:25] crowsnest:		
+[10/07/24 18:15:25] crowsnest:		enable_rtsp: false
+[10/07/24 18:15:25] crowsnest:		rtsp_port: 8554
+[10/07/24 18:15:25] crowsnest:		port: 8080
+[10/07/24 18:15:25] crowsnest:		device: /dev/video0
+[10/07/24 18:15:25] crowsnest:		resolution: 640x480
+[10/07/24 18:15:25] crowsnest:		max_fps: 15
+[10/07/24 18:15:25] crowsnest: INFO: Detect available Devices
+[10/07/24 18:15:26] crowsnest: INFO: Found 1 total available Device(s)
+[10/07/24 18:15:26] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/07/24 18:15:26] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/07/24 18:15:26] crowsnest: Supported Formats:
+[10/07/24 18:15:26] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 640x360
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 1280x720
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 1920x1080
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/07/24 18:15:26] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 640x360
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 1280x720
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 1920x1080
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/07/24 18:15:26] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 640x360
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 1280x720
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/07/24 18:15:26] crowsnest:		Size: Discrete 1920x1080
+[10/07/24 18:15:26] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/07/24 18:15:26] crowsnest: Supported Controls:
+[10/07/24 18:15:26] crowsnest:		
+[10/07/24 18:15:26] crowsnest:		User Controls
+[10/07/24 18:15:26] crowsnest:		
+[10/07/24 18:15:26] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/07/24 18:15:26] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/07/24 18:15:26] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/07/24 18:15:26] crowsnest: Try to start configured Cams / Services...
+[10/07/24 18:15:29] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/07/24 18:15:31] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/07/24 18:15:34] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/07/24 18:15:36] crowsnest:  ... Done!
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [10/08/24 22:28:18] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/08/24 22:28:18] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/08/24 22:28:18] crowsnest: Prepare Startup ...
+[10/08/24 22:28:18] crowsnest: INFO: Host information:
+[10/08/24 22:28:18] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/08/24 22:28:18] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/08/24 22:28:18] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/08/24 22:28:18] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/08/24 22:28:18] crowsnest: Host Info: Available CPU Cores: 4
+[10/08/24 22:28:18] crowsnest: Host Info: Available Memory: 931432 kB
+[10/08/24 22:28:18] crowsnest: Host Info: Diskspace (avail. / total): 21G / 29G
+[10/08/24 22:28:18] crowsnest: INFO: Checking Dependencies
+[10/08/24 22:28:18] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/08/24 22:28:19] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/08/24 22:28:19] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/08/24 22:28:19] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/08/24 22:28:19] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/08/24 22:28:19] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/08/24 22:28:21] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/08/24 22:28:21] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/08/24 22:28:21] crowsnest:		[crowsnest]
+[10/08/24 22:28:21] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/08/24 22:28:21] crowsnest:		log_level: verbose
+[10/08/24 22:28:21] crowsnest:		delete_log: false
+[10/08/24 22:28:21] crowsnest:		no_proxy: false
+[10/08/24 22:28:21] crowsnest:		
+[10/08/24 22:28:21] crowsnest:		[cam 1]
+[10/08/24 22:28:21] crowsnest:		mode: ustreamer
+[10/08/24 22:28:21] crowsnest:		
+[10/08/24 22:28:21] crowsnest:		enable_rtsp: false
+[10/08/24 22:28:21] crowsnest:		rtsp_port: 8554
+[10/08/24 22:28:21] crowsnest:		port: 8080
+[10/08/24 22:28:21] crowsnest:		device: /dev/video0
+[10/08/24 22:28:21] crowsnest:		resolution: 640x480
+[10/08/24 22:28:21] crowsnest:		max_fps: 15
+[10/08/24 22:28:21] crowsnest: INFO: Detect available Devices
+[10/08/24 22:28:21] crowsnest: INFO: Found 1 total available Device(s)
+[10/08/24 22:28:21] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/08/24 22:28:21] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/08/24 22:28:21] crowsnest: Supported Formats:
+[10/08/24 22:28:21] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 640x360
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 1280x720
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 1920x1080
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/08/24 22:28:21] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 640x360
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 1280x720
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 1920x1080
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/08/24 22:28:21] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 640x360
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 1280x720
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/08/24 22:28:21] crowsnest:		Size: Discrete 1920x1080
+[10/08/24 22:28:21] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/08/24 22:28:22] crowsnest: Supported Controls:
+[10/08/24 22:28:22] crowsnest:		
+[10/08/24 22:28:22] crowsnest:		User Controls
+[10/08/24 22:28:22] crowsnest:		
+[10/08/24 22:28:22] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/08/24 22:28:22] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/08/24 22:28:22] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/08/24 22:28:22] crowsnest: Try to start configured Cams / Services...
+[10/08/24 22:28:25] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/08/24 22:28:27] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/08/24 22:28:30] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/08/24 22:28:32] crowsnest:  ... Done!
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [10/10/24 15:10:57] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/10/24 15:10:58] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/10/24 15:10:58] crowsnest: Prepare Startup ...
+[10/10/24 15:10:58] crowsnest: INFO: Host information:
+[10/10/24 15:10:58] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/10/24 15:10:58] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/10/24 15:10:58] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/10/24 15:10:58] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/10/24 15:10:58] crowsnest: Host Info: Available CPU Cores: 4
+[10/10/24 15:10:58] crowsnest: Host Info: Available Memory: 931432 kB
+[10/10/24 15:10:58] crowsnest: Host Info: Diskspace (avail. / total): 21G / 29G
+[10/10/24 15:10:58] crowsnest: INFO: Checking Dependencies
+[10/10/24 15:10:58] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/10/24 15:10:58] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/10/24 15:10:58] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/10/24 15:10:58] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/10/24 15:10:59] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/10/24 15:10:59] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/10/24 15:11:01] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/10/24 15:11:01] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/10/24 15:11:01] crowsnest:		[crowsnest]
+[10/10/24 15:11:01] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/10/24 15:11:01] crowsnest:		log_level: verbose
+[10/10/24 15:11:01] crowsnest:		delete_log: false
+[10/10/24 15:11:01] crowsnest:		no_proxy: false
+[10/10/24 15:11:01] crowsnest:		
+[10/10/24 15:11:01] crowsnest:		[cam 1]
+[10/10/24 15:11:01] crowsnest:		mode: ustreamer
+[10/10/24 15:11:01] crowsnest:		
+[10/10/24 15:11:01] crowsnest:		enable_rtsp: false
+[10/10/24 15:11:01] crowsnest:		rtsp_port: 8554
+[10/10/24 15:11:01] crowsnest:		port: 8080
+[10/10/24 15:11:01] crowsnest:		device: /dev/video0
+[10/10/24 15:11:01] crowsnest:		resolution: 640x480
+[10/10/24 15:11:01] crowsnest:		max_fps: 15
+[10/10/24 15:11:01] crowsnest: INFO: Detect available Devices
+[10/10/24 15:11:01] crowsnest: INFO: Found 1 total available Device(s)
+[10/10/24 15:11:02] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/10/24 15:11:02] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/10/24 15:11:02] crowsnest: Supported Formats:
+[10/10/24 15:11:02] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 640x360
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 1280x720
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 1920x1080
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/10/24 15:11:02] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 640x360
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 1280x720
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 1920x1080
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/10/24 15:11:02] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 640x360
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 1280x720
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/10/24 15:11:02] crowsnest:		Size: Discrete 1920x1080
+[10/10/24 15:11:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/10/24 15:11:02] crowsnest: Supported Controls:
+[10/10/24 15:11:02] crowsnest:		
+[10/10/24 15:11:02] crowsnest:		User Controls
+[10/10/24 15:11:02] crowsnest:		
+[10/10/24 15:11:02] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/10/24 15:11:02] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/10/24 15:11:02] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/10/24 15:11:02] crowsnest: Try to start configured Cams / Services...
+[10/10/24 15:11:05] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/10/24 15:11:07] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/10/24 15:11:11] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/10/24 15:11:12] crowsnest:  ... Done!
+[10/13/24 12:04:31] crowsnest: WATCHDOG: Lost Device: '/dev/video0'
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [10/13/24 19:50:43] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/13/24 19:50:43] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/13/24 19:50:43] crowsnest: Prepare Startup ...
+[10/13/24 19:50:43] crowsnest: INFO: Host information:
+[10/13/24 19:50:43] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/13/24 19:50:43] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/13/24 19:50:43] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/13/24 19:50:43] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/13/24 19:50:43] crowsnest: Host Info: Available CPU Cores: 4
+[10/13/24 19:50:43] crowsnest: Host Info: Available Memory: 931432 kB
+[10/13/24 19:50:43] crowsnest: Host Info: Diskspace (avail. / total): 21G / 29G
+[10/13/24 19:50:43] crowsnest: INFO: Checking Dependencies
+[10/13/24 19:50:43] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/13/24 19:50:43] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/13/24 19:50:44] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/13/24 19:50:44] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/13/24 19:50:44] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/13/24 19:50:44] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/13/24 19:50:46] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/13/24 19:50:46] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/13/24 19:50:46] crowsnest:		[crowsnest]
+[10/13/24 19:50:46] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/13/24 19:50:46] crowsnest:		log_level: verbose
+[10/13/24 19:50:46] crowsnest:		delete_log: false
+[10/13/24 19:50:46] crowsnest:		no_proxy: false
+[10/13/24 19:50:46] crowsnest:		
+[10/13/24 19:50:46] crowsnest:		[cam 1]
+[10/13/24 19:50:46] crowsnest:		mode: ustreamer
+[10/13/24 19:50:46] crowsnest:		
+[10/13/24 19:50:46] crowsnest:		enable_rtsp: false
+[10/13/24 19:50:46] crowsnest:		rtsp_port: 8554
+[10/13/24 19:50:46] crowsnest:		port: 8080
+[10/13/24 19:50:46] crowsnest:		device: /dev/video0
+[10/13/24 19:50:46] crowsnest:		resolution: 640x480
+[10/13/24 19:50:46] crowsnest:		max_fps: 15
+[10/13/24 19:50:46] crowsnest: INFO: Detect available Devices
+[10/13/24 19:50:47] crowsnest: INFO: Found 1 total available Device(s)
+[10/13/24 19:50:47] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/13/24 19:50:47] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/13/24 19:50:47] crowsnest: Supported Formats:
+[10/13/24 19:50:47] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 640x360
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 1280x720
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 1920x1080
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/13/24 19:50:47] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 640x360
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 1280x720
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 1920x1080
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/13/24 19:50:47] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 640x360
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 1280x720
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/13/24 19:50:47] crowsnest:		Size: Discrete 1920x1080
+[10/13/24 19:50:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/13/24 19:50:47] crowsnest: Supported Controls:
+[10/13/24 19:50:47] crowsnest:		
+[10/13/24 19:50:47] crowsnest:		User Controls
+[10/13/24 19:50:47] crowsnest:		
+[10/13/24 19:50:47] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/13/24 19:50:47] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/13/24 19:50:47] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/13/24 19:50:47] crowsnest: Try to start configured Cams / Services...
+[10/13/24 19:50:50] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/13/24 19:50:52] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/13/24 19:50:57] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/13/24 19:50:57] crowsnest:  ... Done!
+[10/14/24 22:15:39] crowsnest: Shutdown or Killed by User!
+[10/14/24 22:15:39] crowsnest: Please come again :)
+[10/14/24 22:15:39] crowsnest: Goodbye...
+[10/14/24 22:15:57] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/14/24 22:15:57] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/14/24 22:15:57] crowsnest: Prepare Startup ...
+[10/14/24 22:15:57] crowsnest: INFO: Host information:
+[10/14/24 22:15:58] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/14/24 22:15:58] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/14/24 22:15:58] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/14/24 22:15:58] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/14/24 22:15:58] crowsnest: Host Info: Available CPU Cores: 4
+[10/14/24 22:15:58] crowsnest: Host Info: Available Memory: 931432 kB
+[10/14/24 22:15:58] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/14/24 22:15:58] crowsnest: INFO: Checking Dependencies
+[10/14/24 22:15:58] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/14/24 22:15:58] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/14/24 22:15:58] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/14/24 22:15:58] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/14/24 22:15:58] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/14/24 22:15:58] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/14/24 22:16:00] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/14/24 22:16:00] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/14/24 22:16:00] crowsnest:		[crowsnest]
+[10/14/24 22:16:00] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/14/24 22:16:00] crowsnest:		log_level: verbose
+[10/14/24 22:16:00] crowsnest:		delete_log: false
+[10/14/24 22:16:00] crowsnest:		no_proxy: false
+[10/14/24 22:16:00] crowsnest:		
+[10/14/24 22:16:00] crowsnest:		[cam 1]
+[10/14/24 22:16:00] crowsnest:		mode: ustreamer
+[10/14/24 22:16:00] crowsnest:		
+[10/14/24 22:16:00] crowsnest:		enable_rtsp: false
+[10/14/24 22:16:00] crowsnest:		rtsp_port: 8554
+[10/14/24 22:16:00] crowsnest:		port: 8080
+[10/14/24 22:16:00] crowsnest:		device: /dev/video0
+[10/14/24 22:16:00] crowsnest:		resolution: 640x480
+[10/14/24 22:16:00] crowsnest:		max_fps: 15
+[10/14/24 22:16:00] crowsnest: INFO: Detect available Devices
+[10/14/24 22:16:01] crowsnest: INFO: Found 1 total available Device(s)
+[10/14/24 22:16:01] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/14/24 22:16:01] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/14/24 22:16:01] crowsnest: Supported Formats:
+[10/14/24 22:16:01] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 640x360
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 1280x720
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 1920x1080
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/14/24 22:16:01] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 640x360
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 1280x720
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 1920x1080
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/14/24 22:16:01] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 640x360
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 1280x720
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/14/24 22:16:01] crowsnest:		Size: Discrete 1920x1080
+[10/14/24 22:16:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/14/24 22:16:01] crowsnest: Supported Controls:
+[10/14/24 22:16:01] crowsnest:		
+[10/14/24 22:16:01] crowsnest:		User Controls
+[10/14/24 22:16:01] crowsnest:		
+[10/14/24 22:16:01] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/14/24 22:16:01] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/14/24 22:16:01] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/14/24 22:16:01] crowsnest: Try to start configured Cams / Services...
+[10/14/24 22:16:05] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/14/24 22:16:06] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/14/24 22:16:09] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/14/24 22:16:11] crowsnest:  ... Done!
+[10/15/24 22:20:34] crowsnest: Shutdown or Killed by User!
+[10/15/24 22:20:34] crowsnest: Please come again :)
+[10/15/24 22:20:34] crowsnest: Goodbye...
+[10/15/24 22:20:51] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/15/24 22:20:51] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/15/24 22:20:51] crowsnest: Prepare Startup ...
+[10/15/24 22:20:51] crowsnest: INFO: Host information:
+[10/15/24 22:20:51] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/15/24 22:20:52] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/15/24 22:20:52] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/15/24 22:20:52] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/15/24 22:20:52] crowsnest: Host Info: Available CPU Cores: 4
+[10/15/24 22:20:52] crowsnest: Host Info: Available Memory: 931432 kB
+[10/15/24 22:20:52] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/15/24 22:20:52] crowsnest: INFO: Checking Dependencies
+[10/15/24 22:20:52] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/15/24 22:20:52] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/15/24 22:20:52] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/15/24 22:20:52] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/15/24 22:20:52] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/15/24 22:20:52] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/15/24 22:20:54] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/15/24 22:20:54] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/15/24 22:20:54] crowsnest:		[crowsnest]
+[10/15/24 22:20:54] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/15/24 22:20:54] crowsnest:		log_level: verbose
+[10/15/24 22:20:54] crowsnest:		delete_log: false
+[10/15/24 22:20:54] crowsnest:		no_proxy: false
+[10/15/24 22:20:54] crowsnest:		
+[10/15/24 22:20:54] crowsnest:		[cam 1]
+[10/15/24 22:20:54] crowsnest:		mode: ustreamer
+[10/15/24 22:20:54] crowsnest:		
+[10/15/24 22:20:54] crowsnest:		enable_rtsp: false
+[10/15/24 22:20:54] crowsnest:		rtsp_port: 8554
+[10/15/24 22:20:54] crowsnest:		port: 8080
+[10/15/24 22:20:54] crowsnest:		device: /dev/video0
+[10/15/24 22:20:54] crowsnest:		resolution: 640x480
+[10/15/24 22:20:54] crowsnest:		max_fps: 15
+[10/15/24 22:20:54] crowsnest: INFO: Detect available Devices
+[10/15/24 22:20:55] crowsnest: INFO: Found 1 total available Device(s)
+[10/15/24 22:20:55] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/15/24 22:20:55] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/15/24 22:20:55] crowsnest: Supported Formats:
+[10/15/24 22:20:55] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 640x360
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 1280x720
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 1920x1080
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/15/24 22:20:55] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 640x360
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 1280x720
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 1920x1080
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/15/24 22:20:55] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 640x360
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 1280x720
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/15/24 22:20:55] crowsnest:		Size: Discrete 1920x1080
+[10/15/24 22:20:55] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/15/24 22:20:55] crowsnest: Supported Controls:
+[10/15/24 22:20:55] crowsnest:		
+[10/15/24 22:20:55] crowsnest:		User Controls
+[10/15/24 22:20:55] crowsnest:		
+[10/15/24 22:20:55] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/15/24 22:20:55] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/15/24 22:20:55] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/15/24 22:20:55] crowsnest: Try to start configured Cams / Services...
+[10/15/24 22:20:59] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/15/24 22:21:00] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/15/24 22:21:04] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/15/24 22:21:05] crowsnest:  ... Done!
+[10/17/24 22:33:04] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/17/24 22:33:04] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/17/24 22:33:04] crowsnest: Prepare Startup ...
+[10/17/24 22:33:05] crowsnest: INFO: Host information:
+[10/17/24 22:33:05] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/17/24 22:33:05] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/17/24 22:33:05] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/17/24 22:33:05] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/17/24 22:33:05] crowsnest: Host Info: Available CPU Cores: 4
+[10/17/24 22:33:05] crowsnest: Host Info: Available Memory: 931432 kB
+[10/17/24 22:33:05] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/17/24 22:33:05] crowsnest: INFO: Checking Dependencies
+[10/17/24 22:33:05] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/17/24 22:33:05] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/17/24 22:33:05] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/17/24 22:33:05] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/17/24 22:33:05] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/17/24 22:33:06] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/17/24 22:33:07] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/17/24 22:33:07] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/17/24 22:33:07] crowsnest:		[crowsnest]
+[10/17/24 22:33:07] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/17/24 22:33:07] crowsnest:		log_level: verbose
+[10/17/24 22:33:07] crowsnest:		delete_log: false
+[10/17/24 22:33:07] crowsnest:		no_proxy: false
+[10/17/24 22:33:07] crowsnest:		
+[10/17/24 22:33:07] crowsnest:		[cam 1]
+[10/17/24 22:33:07] crowsnest:		mode: ustreamer
+[10/17/24 22:33:07] crowsnest:		
+[10/17/24 22:33:07] crowsnest:		enable_rtsp: false
+[10/17/24 22:33:07] crowsnest:		rtsp_port: 8554
+[10/17/24 22:33:07] crowsnest:		port: 8080
+[10/17/24 22:33:07] crowsnest:		device: /dev/video0
+[10/17/24 22:33:07] crowsnest:		resolution: 640x480
+[10/17/24 22:33:07] crowsnest:		max_fps: 15
+[10/17/24 22:33:07] crowsnest: INFO: Detect available Devices
+[10/17/24 22:33:08] crowsnest: INFO: Found 1 total available Device(s)
+[10/17/24 22:33:08] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/17/24 22:33:08] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/17/24 22:33:08] crowsnest: Supported Formats:
+[10/17/24 22:33:08] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 640x360
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 1280x720
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 1920x1080
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/17/24 22:33:08] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 640x360
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 1280x720
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 1920x1080
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/17/24 22:33:08] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 640x360
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 1280x720
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/17/24 22:33:08] crowsnest:		Size: Discrete 1920x1080
+[10/17/24 22:33:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/17/24 22:33:08] crowsnest: Supported Controls:
+[10/17/24 22:33:08] crowsnest:		
+[10/17/24 22:33:08] crowsnest:		User Controls
+[10/17/24 22:33:08] crowsnest:		
+[10/17/24 22:33:08] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/17/24 22:33:08] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/17/24 22:33:08] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/17/24 22:33:08] crowsnest: Try to start configured Cams / Services...
+[10/17/24 22:33:12] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/17/24 22:33:13] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/17/24 22:33:17] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/17/24 22:33:18] crowsnest:  ... Done!
+[10/19/24 10:00:59] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/19/24 10:01:00] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/19/24 10:01:00] crowsnest: Prepare Startup ...
+[10/19/24 10:01:00] crowsnest: INFO: Host information:
+[10/19/24 10:01:00] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/19/24 10:01:00] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/19/24 10:01:00] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/19/24 10:01:00] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/19/24 10:01:00] crowsnest: Host Info: Available CPU Cores: 4
+[10/19/24 10:01:00] crowsnest: Host Info: Available Memory: 931432 kB
+[10/19/24 10:01:00] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/19/24 10:01:00] crowsnest: INFO: Checking Dependencies
+[10/19/24 10:01:00] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/19/24 10:01:01] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/19/24 10:01:01] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/19/24 10:01:01] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/19/24 10:01:01] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/19/24 10:01:01] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/19/24 10:01:04] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/19/24 10:01:04] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/19/24 10:01:04] crowsnest:		[crowsnest]
+[10/19/24 10:01:04] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/19/24 10:01:04] crowsnest:		log_level: verbose
+[10/19/24 10:01:04] crowsnest:		delete_log: false
+[10/19/24 10:01:04] crowsnest:		no_proxy: false
+[10/19/24 10:01:04] crowsnest:		
+[10/19/24 10:01:04] crowsnest:		[cam 1]
+[10/19/24 10:01:04] crowsnest:		mode: ustreamer
+[10/19/24 10:01:04] crowsnest:		
+[10/19/24 10:01:04] crowsnest:		enable_rtsp: false
+[10/19/24 10:01:04] crowsnest:		rtsp_port: 8554
+[10/19/24 10:01:04] crowsnest:		port: 8080
+[10/19/24 10:01:04] crowsnest:		device: /dev/video0
+[10/19/24 10:01:04] crowsnest:		resolution: 640x480
+[10/19/24 10:01:04] crowsnest:		max_fps: 15
+[10/19/24 10:01:04] crowsnest: INFO: Detect available Devices
+[10/19/24 10:01:05] crowsnest: INFO: Found 1 total available Device(s)
+[10/19/24 10:01:05] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/19/24 10:01:05] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/19/24 10:01:05] crowsnest: Supported Formats:
+[10/19/24 10:01:05] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 640x360
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 1280x720
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:01:05] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 640x360
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 1280x720
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/19/24 10:01:05] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 640x360
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 1280x720
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:01:05] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 10:01:05] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:01:05] crowsnest: Supported Controls:
+[10/19/24 10:01:05] crowsnest:		
+[10/19/24 10:01:05] crowsnest:		User Controls
+[10/19/24 10:01:05] crowsnest:		
+[10/19/24 10:01:05] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 10:01:05] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 10:01:05] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 10:01:05] crowsnest: Try to start configured Cams / Services...
+[10/19/24 10:01:12] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/19/24 10:01:14] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/19/24 10:01:19] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/19/24 10:01:20] crowsnest:  ... Done!
+[10/19/24 10:05:03] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/19/24 10:05:03] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/19/24 10:05:03] crowsnest: Prepare Startup ...
+[10/19/24 10:05:03] crowsnest: INFO: Host information:
+[10/19/24 10:05:03] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/19/24 10:05:03] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/19/24 10:05:03] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/19/24 10:05:03] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/19/24 10:05:04] crowsnest: Host Info: Available CPU Cores: 4
+[10/19/24 10:05:04] crowsnest: Host Info: Available Memory: 931432 kB
+[10/19/24 10:05:04] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/19/24 10:05:04] crowsnest: INFO: Checking Dependencies
+[10/19/24 10:05:04] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/19/24 10:05:04] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/19/24 10:05:04] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/19/24 10:05:04] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/19/24 10:05:04] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/19/24 10:05:04] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/19/24 10:05:06] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/19/24 10:05:06] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/19/24 10:05:06] crowsnest:		[crowsnest]
+[10/19/24 10:05:06] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/19/24 10:05:06] crowsnest:		log_level: verbose
+[10/19/24 10:05:06] crowsnest:		delete_log: false
+[10/19/24 10:05:06] crowsnest:		no_proxy: false
+[10/19/24 10:05:06] crowsnest:		
+[10/19/24 10:05:06] crowsnest:		[cam 1]
+[10/19/24 10:05:06] crowsnest:		mode: ustreamer
+[10/19/24 10:05:06] crowsnest:		
+[10/19/24 10:05:06] crowsnest:		enable_rtsp: false
+[10/19/24 10:05:06] crowsnest:		rtsp_port: 8554
+[10/19/24 10:05:06] crowsnest:		port: 8080
+[10/19/24 10:05:06] crowsnest:		device: /dev/video0
+[10/19/24 10:05:06] crowsnest:		resolution: 640x480
+[10/19/24 10:05:06] crowsnest:		max_fps: 15
+[10/19/24 10:05:06] crowsnest: INFO: Detect available Devices
+[10/19/24 10:05:07] crowsnest: INFO: Found 1 total available Device(s)
+[10/19/24 10:05:07] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/19/24 10:05:07] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/19/24 10:05:07] crowsnest: Supported Formats:
+[10/19/24 10:05:07] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 640x360
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 1280x720
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:05:07] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 640x360
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 1280x720
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/19/24 10:05:07] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 640x360
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 1280x720
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:05:07] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 10:05:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 10:05:07] crowsnest: Supported Controls:
+[10/19/24 10:05:07] crowsnest:		
+[10/19/24 10:05:07] crowsnest:		User Controls
+[10/19/24 10:05:07] crowsnest:		
+[10/19/24 10:05:07] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 10:05:07] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 10:05:07] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 10:05:07] crowsnest: Try to start configured Cams / Services...
+[10/19/24 10:05:10] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/19/24 10:05:12] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/19/24 10:05:16] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/19/24 10:05:17] crowsnest:  ... Done!
+[10/19/24 16:58:39] crowsnest: Shutdown or Killed by User!
+[10/19/24 16:58:39] crowsnest: Please come again :)
+[10/19/24 16:58:56] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/19/24 16:58:57] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/19/24 16:58:57] crowsnest: Prepare Startup ...
+[10/19/24 16:58:57] crowsnest: INFO: Host information:
+[10/19/24 16:58:57] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/19/24 16:58:57] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/19/24 16:58:57] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/19/24 16:58:57] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/19/24 16:58:57] crowsnest: Host Info: Available CPU Cores: 4
+[10/19/24 16:58:57] crowsnest: Host Info: Available Memory: 931432 kB
+[10/19/24 16:58:57] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/19/24 16:58:57] crowsnest: INFO: Checking Dependencies
+[10/19/24 16:58:58] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/19/24 16:58:58] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/19/24 16:58:58] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/19/24 16:58:58] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/19/24 16:58:58] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/19/24 16:58:58] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/19/24 16:59:01] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/19/24 16:59:01] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/19/24 16:59:01] crowsnest:		[crowsnest]
+[10/19/24 16:59:01] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/19/24 16:59:01] crowsnest:		log_level: verbose
+[10/19/24 16:59:01] crowsnest:		delete_log: false
+[10/19/24 16:59:01] crowsnest:		no_proxy: false
+[10/19/24 16:59:01] crowsnest:		
+[10/19/24 16:59:01] crowsnest:		[cam 1]
+[10/19/24 16:59:01] crowsnest:		mode: ustreamer
+[10/19/24 16:59:01] crowsnest:		
+[10/19/24 16:59:01] crowsnest:		enable_rtsp: false
+[10/19/24 16:59:01] crowsnest:		rtsp_port: 8554
+[10/19/24 16:59:01] crowsnest:		port: 8080
+[10/19/24 16:59:01] crowsnest:		device: /dev/video0
+[10/19/24 16:59:01] crowsnest:		resolution: 640x480
+[10/19/24 16:59:01] crowsnest:		max_fps: 15
+[10/19/24 16:59:01] crowsnest: INFO: Detect available Devices
+[10/19/24 16:59:02] crowsnest: INFO: Found 1 total available Device(s)
+[10/19/24 16:59:02] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/19/24 16:59:02] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/19/24 16:59:02] crowsnest: Supported Formats:
+[10/19/24 16:59:02] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 640x360
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 1280x720
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 16:59:02] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 640x360
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 1280x720
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/19/24 16:59:02] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 640x360
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 1280x720
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 16:59:02] crowsnest:		Size: Discrete 1920x1080
+[10/19/24 16:59:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/19/24 16:59:02] crowsnest: Supported Controls:
+[10/19/24 16:59:02] crowsnest:		
+[10/19/24 16:59:02] crowsnest:		User Controls
+[10/19/24 16:59:02] crowsnest:		
+[10/19/24 16:59:02] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 16:59:02] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 16:59:02] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/19/24 16:59:02] crowsnest: Try to start configured Cams / Services...
+[10/19/24 16:59:06] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/19/24 16:59:07] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/19/24 16:59:11] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/19/24 16:59:12] crowsnest:  ... Done!
+[10/22/24 06:59:25] crowsnest: Shutdown or Killed by User!
+[10/22/24 06:59:25] crowsnest: Please come again :)
+[10/22/24 06:59:25] crowsnest: Goodbye...
+[10/22/24 06:59:42] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/22/24 06:59:43] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/22/24 06:59:43] crowsnest: Prepare Startup ...
+[10/22/24 06:59:43] crowsnest: INFO: Host information:
+[10/22/24 06:59:43] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/22/24 06:59:43] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/22/24 06:59:43] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/22/24 06:59:43] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/22/24 06:59:43] crowsnest: Host Info: Available CPU Cores: 4
+[10/22/24 06:59:43] crowsnest: Host Info: Available Memory: 931432 kB
+[10/22/24 06:59:43] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/22/24 06:59:43] crowsnest: INFO: Checking Dependencies
+[10/22/24 06:59:43] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/22/24 06:59:44] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/22/24 06:59:44] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/22/24 06:59:44] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/22/24 06:59:44] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/22/24 06:59:44] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/22/24 06:59:46] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/22/24 06:59:46] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/22/24 06:59:46] crowsnest:		[crowsnest]
+[10/22/24 06:59:46] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/22/24 06:59:46] crowsnest:		log_level: verbose
+[10/22/24 06:59:46] crowsnest:		delete_log: false
+[10/22/24 06:59:46] crowsnest:		no_proxy: false
+[10/22/24 06:59:46] crowsnest:		
+[10/22/24 06:59:46] crowsnest:		[cam 1]
+[10/22/24 06:59:46] crowsnest:		mode: ustreamer
+[10/22/24 06:59:46] crowsnest:		
+[10/22/24 06:59:46] crowsnest:		enable_rtsp: false
+[10/22/24 06:59:46] crowsnest:		rtsp_port: 8554
+[10/22/24 06:59:46] crowsnest:		port: 8080
+[10/22/24 06:59:46] crowsnest:		device: /dev/video0
+[10/22/24 06:59:46] crowsnest:		resolution: 640x480
+[10/22/24 06:59:46] crowsnest:		max_fps: 15
+[10/22/24 06:59:46] crowsnest: INFO: Detect available Devices
+[10/22/24 06:59:46] crowsnest: INFO: Found 1 total available Device(s)
+[10/22/24 06:59:47] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/22/24 06:59:47] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/22/24 06:59:47] crowsnest: Supported Formats:
+[10/22/24 06:59:47] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 640x360
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 1280x720
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 1920x1080
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/22/24 06:59:47] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 640x360
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 1280x720
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 1920x1080
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/22/24 06:59:47] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 640x360
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 1280x720
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/22/24 06:59:47] crowsnest:		Size: Discrete 1920x1080
+[10/22/24 06:59:47] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/22/24 06:59:47] crowsnest: Supported Controls:
+[10/22/24 06:59:47] crowsnest:		
+[10/22/24 06:59:47] crowsnest:		User Controls
+[10/22/24 06:59:47] crowsnest:		
+[10/22/24 06:59:47] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/22/24 06:59:47] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/22/24 06:59:47] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/22/24 06:59:47] crowsnest: Try to start configured Cams / Services...
+[10/22/24 06:59:50] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/22/24 06:59:52] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/22/24 06:59:55] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/22/24 06:59:56] crowsnest:  ... Done!
+[10/25/24 23:09:12] crowsnest: Shutdown or Killed by User!
+[10/25/24 23:09:12] crowsnest: Please come again :)
+[10/25/24 23:09:30] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/25/24 23:09:30] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/25/24 23:09:30] crowsnest: Prepare Startup ...
+[10/25/24 23:09:31] crowsnest: INFO: Host information:
+[10/25/24 23:09:31] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/25/24 23:09:31] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/25/24 23:09:31] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/25/24 23:09:31] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/25/24 23:09:31] crowsnest: Host Info: Available CPU Cores: 4
+[10/25/24 23:09:31] crowsnest: Host Info: Available Memory: 931432 kB
+[10/25/24 23:09:31] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/25/24 23:09:31] crowsnest: INFO: Checking Dependencies
+[10/25/24 23:09:31] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/25/24 23:09:31] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/25/24 23:09:31] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/25/24 23:09:31] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/25/24 23:09:31] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/25/24 23:09:32] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/25/24 23:09:33] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/25/24 23:09:33] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/25/24 23:09:33] crowsnest:		[crowsnest]
+[10/25/24 23:09:33] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/25/24 23:09:33] crowsnest:		log_level: verbose
+[10/25/24 23:09:33] crowsnest:		delete_log: false
+[10/25/24 23:09:33] crowsnest:		no_proxy: false
+[10/25/24 23:09:33] crowsnest:		
+[10/25/24 23:09:33] crowsnest:		[cam 1]
+[10/25/24 23:09:33] crowsnest:		mode: ustreamer
+[10/25/24 23:09:33] crowsnest:		
+[10/25/24 23:09:33] crowsnest:		enable_rtsp: false
+[10/25/24 23:09:33] crowsnest:		rtsp_port: 8554
+[10/25/24 23:09:33] crowsnest:		port: 8080
+[10/25/24 23:09:33] crowsnest:		device: /dev/video0
+[10/25/24 23:09:33] crowsnest:		resolution: 640x480
+[10/25/24 23:09:33] crowsnest:		max_fps: 15
+[10/25/24 23:09:33] crowsnest: INFO: Detect available Devices
+[10/25/24 23:09:34] crowsnest: INFO: Found 1 total available Device(s)
+[10/25/24 23:09:34] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/25/24 23:09:34] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/25/24 23:09:34] crowsnest: Supported Formats:
+[10/25/24 23:09:34] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 640x360
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 1280x720
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 1920x1080
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/25/24 23:09:34] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 640x360
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 1280x720
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 1920x1080
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/25/24 23:09:34] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 640x360
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 1280x720
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/25/24 23:09:34] crowsnest:		Size: Discrete 1920x1080
+[10/25/24 23:09:34] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/25/24 23:09:34] crowsnest: Supported Controls:
+[10/25/24 23:09:34] crowsnest:		
+[10/25/24 23:09:34] crowsnest:		User Controls
+[10/25/24 23:09:34] crowsnest:		
+[10/25/24 23:09:34] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/25/24 23:09:34] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/25/24 23:09:34] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/25/24 23:09:34] crowsnest: Try to start configured Cams / Services...
+[10/25/24 23:09:38] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/25/24 23:09:39] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/25/24 23:09:43] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/25/24 23:09:44] crowsnest:  ... Done!
+[10/29/24 07:17:18] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/29/24 07:17:19] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/29/24 07:17:19] crowsnest: Prepare Startup ...
+[10/29/24 07:17:19] crowsnest: INFO: Host information:
+[10/29/24 07:17:19] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/29/24 07:17:19] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/29/24 07:17:19] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/29/24 07:17:19] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/29/24 07:17:19] crowsnest: Host Info: Available CPU Cores: 4
+[10/29/24 07:17:19] crowsnest: Host Info: Available Memory: 931432 kB
+[10/29/24 07:17:19] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/29/24 07:17:19] crowsnest: INFO: Checking Dependencies
+[10/29/24 07:17:20] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/29/24 07:17:20] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/29/24 07:17:20] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/29/24 07:17:20] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/29/24 07:17:20] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/29/24 07:17:20] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/29/24 07:17:22] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/29/24 07:17:22] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/29/24 07:17:22] crowsnest:		[crowsnest]
+[10/29/24 07:17:22] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/29/24 07:17:22] crowsnest:		log_level: verbose
+[10/29/24 07:17:22] crowsnest:		delete_log: false
+[10/29/24 07:17:22] crowsnest:		no_proxy: false
+[10/29/24 07:17:22] crowsnest:		
+[10/29/24 07:17:22] crowsnest:		[cam 1]
+[10/29/24 07:17:22] crowsnest:		mode: ustreamer
+[10/29/24 07:17:22] crowsnest:		
+[10/29/24 07:17:22] crowsnest:		enable_rtsp: false
+[10/29/24 07:17:22] crowsnest:		rtsp_port: 8554
+[10/29/24 07:17:22] crowsnest:		port: 8080
+[10/29/24 07:17:22] crowsnest:		device: /dev/video0
+[10/29/24 07:17:22] crowsnest:		resolution: 640x480
+[10/29/24 07:17:22] crowsnest:		max_fps: 15
+[10/29/24 07:17:22] crowsnest: INFO: Detect available Devices
+[10/29/24 07:17:23] crowsnest: INFO: Found 1 total available Device(s)
+[10/29/24 07:17:23] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/29/24 07:17:23] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/29/24 07:17:23] crowsnest: Supported Formats:
+[10/29/24 07:17:23] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 640x360
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 1280x720
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 1920x1080
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 07:17:23] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 640x360
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 1280x720
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 1920x1080
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/29/24 07:17:23] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 640x360
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 1280x720
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 07:17:23] crowsnest:		Size: Discrete 1920x1080
+[10/29/24 07:17:23] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 07:17:23] crowsnest: Supported Controls:
+[10/29/24 07:17:23] crowsnest:		
+[10/29/24 07:17:23] crowsnest:		User Controls
+[10/29/24 07:17:23] crowsnest:		
+[10/29/24 07:17:23] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/29/24 07:17:23] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/29/24 07:17:23] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/29/24 07:17:23] crowsnest: Try to start configured Cams / Services...
+[10/29/24 07:17:27] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/29/24 07:17:28] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/29/24 07:17:33] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/29/24 07:17:34] crowsnest:  ... Done!
+[10/29/24 21:55:34] crowsnest: Shutdown or Killed by User!
+[10/29/24 21:55:34] crowsnest: Please come again :)
+[10/29/24 21:55:34] crowsnest: Goodbye...
+[10/29/24 21:55:54] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/29/24 21:55:55] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/29/24 21:55:55] crowsnest: Prepare Startup ...
+[10/29/24 21:55:55] crowsnest: INFO: Host information:
+[10/29/24 21:55:55] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/29/24 21:55:55] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/29/24 21:55:55] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/29/24 21:55:55] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/29/24 21:55:55] crowsnest: Host Info: Available CPU Cores: 4
+[10/29/24 21:55:55] crowsnest: Host Info: Available Memory: 931428 kB
+[10/29/24 21:55:55] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/29/24 21:55:55] crowsnest: INFO: Checking Dependencies
+[10/29/24 21:55:55] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/29/24 21:55:55] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/29/24 21:55:56] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/29/24 21:55:56] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/29/24 21:55:56] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/29/24 21:55:56] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/29/24 21:55:59] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/29/24 21:55:59] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/29/24 21:55:59] crowsnest:		[crowsnest]
+[10/29/24 21:55:59] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/29/24 21:55:59] crowsnest:		log_level: verbose
+[10/29/24 21:55:59] crowsnest:		delete_log: false
+[10/29/24 21:55:59] crowsnest:		no_proxy: false
+[10/29/24 21:55:59] crowsnest:		
+[10/29/24 21:55:59] crowsnest:		[cam 1]
+[10/29/24 21:55:59] crowsnest:		mode: ustreamer
+[10/29/24 21:55:59] crowsnest:		
+[10/29/24 21:55:59] crowsnest:		enable_rtsp: false
+[10/29/24 21:55:59] crowsnest:		rtsp_port: 8554
+[10/29/24 21:55:59] crowsnest:		port: 8080
+[10/29/24 21:55:59] crowsnest:		device: /dev/video0
+[10/29/24 21:55:59] crowsnest:		resolution: 640x480
+[10/29/24 21:55:59] crowsnest:		max_fps: 15
+[10/29/24 21:55:59] crowsnest: INFO: Detect available Devices
+[10/29/24 21:56:00] crowsnest: INFO: Found 1 total available Device(s)
+[10/29/24 21:56:00] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/29/24 21:56:00] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/29/24 21:56:00] crowsnest: Supported Formats:
+[10/29/24 21:56:00] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 640x360
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 1280x720
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 1920x1080
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 21:56:00] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 640x360
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 1280x720
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 1920x1080
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/29/24 21:56:00] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 640x360
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 1280x720
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 21:56:00] crowsnest:		Size: Discrete 1920x1080
+[10/29/24 21:56:00] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/29/24 21:56:00] crowsnest: Supported Controls:
+[10/29/24 21:56:00] crowsnest:		
+[10/29/24 21:56:00] crowsnest:		User Controls
+[10/29/24 21:56:00] crowsnest:		
+[10/29/24 21:56:00] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/29/24 21:56:00] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/29/24 21:56:00] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/29/24 21:56:00] crowsnest: Try to start configured Cams / Services...
+[10/29/24 21:56:04] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/29/24 21:56:05] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/29/24 21:56:10] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/29/24 21:56:11] crowsnest:  ... Done!
+[10/30/24 22:41:23] crowsnest: Shutdown or Killed by User!
+[10/30/24 22:41:23] crowsnest: Please come again :)
+[10/30/24 22:41:23] crowsnest: Goodbye...
+[10/30/24 22:41:45] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/30/24 22:41:45] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/30/24 22:41:45] crowsnest: Prepare Startup ...
+[10/30/24 22:41:45] crowsnest: INFO: Host information:
+[10/30/24 22:41:46] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/30/24 22:41:46] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/30/24 22:41:46] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/30/24 22:41:46] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/30/24 22:41:46] crowsnest: Host Info: Available CPU Cores: 4
+[10/30/24 22:41:46] crowsnest: Host Info: Available Memory: 931432 kB
+[10/30/24 22:41:46] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/30/24 22:41:46] crowsnest: INFO: Checking Dependencies
+[10/30/24 22:41:46] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/30/24 22:41:46] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/30/24 22:41:46] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/30/24 22:41:46] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/30/24 22:41:46] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/30/24 22:41:47] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/30/24 22:41:49] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/30/24 22:41:49] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/30/24 22:41:49] crowsnest:		[crowsnest]
+[10/30/24 22:41:49] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/30/24 22:41:49] crowsnest:		log_level: verbose
+[10/30/24 22:41:49] crowsnest:		delete_log: false
+[10/30/24 22:41:49] crowsnest:		no_proxy: false
+[10/30/24 22:41:49] crowsnest:		
+[10/30/24 22:41:49] crowsnest:		[cam 1]
+[10/30/24 22:41:49] crowsnest:		mode: ustreamer
+[10/30/24 22:41:49] crowsnest:		
+[10/30/24 22:41:49] crowsnest:		enable_rtsp: false
+[10/30/24 22:41:49] crowsnest:		rtsp_port: 8554
+[10/30/24 22:41:49] crowsnest:		port: 8080
+[10/30/24 22:41:49] crowsnest:		device: /dev/video0
+[10/30/24 22:41:49] crowsnest:		resolution: 640x480
+[10/30/24 22:41:49] crowsnest:		max_fps: 15
+[10/30/24 22:41:49] crowsnest: INFO: Detect available Devices
+[10/30/24 22:41:50] crowsnest: INFO: Found 1 total available Device(s)
+[10/30/24 22:41:50] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/30/24 22:41:50] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/30/24 22:41:50] crowsnest: Supported Formats:
+[10/30/24 22:41:50] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 640x360
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 1280x720
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 1920x1080
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/30/24 22:41:50] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 640x360
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 1280x720
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 1920x1080
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/30/24 22:41:50] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 640x360
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 1280x720
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/30/24 22:41:50] crowsnest:		Size: Discrete 1920x1080
+[10/30/24 22:41:50] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/30/24 22:41:50] crowsnest: Supported Controls:
+[10/30/24 22:41:50] crowsnest:		
+[10/30/24 22:41:50] crowsnest:		User Controls
+[10/30/24 22:41:50] crowsnest:		
+[10/30/24 22:41:50] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/30/24 22:41:50] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/30/24 22:41:50] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/30/24 22:41:50] crowsnest: Try to start configured Cams / Services...
+[10/30/24 22:41:54] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/30/24 22:41:56] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/30/24 22:42:01] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/30/24 22:42:01] crowsnest:  ... Done!
+[10/31/24 21:21:42] crowsnest: Shutdown or Killed by User!
+[10/31/24 21:21:43] crowsnest: Please come again :)
+[10/31/24 21:21:43] crowsnest: Goodbye...
+[10/31/24 21:22:03] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[10/31/24 21:22:03] crowsnest: Version: v4.1.9-1-gd75a3ae
+[10/31/24 21:22:03] crowsnest: Prepare Startup ...
+[10/31/24 21:22:03] crowsnest: INFO: Host information:
+[10/31/24 21:22:03] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[10/31/24 21:22:03] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[10/31/24 21:22:03] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[10/31/24 21:22:03] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[10/31/24 21:22:03] crowsnest: Host Info: Available CPU Cores: 4
+[10/31/24 21:22:03] crowsnest: Host Info: Available Memory: 931432 kB
+[10/31/24 21:22:03] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[10/31/24 21:22:03] crowsnest: INFO: Checking Dependencies
+[10/31/24 21:22:04] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[10/31/24 21:22:04] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[10/31/24 21:22:04] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[10/31/24 21:22:04] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[10/31/24 21:22:04] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[10/31/24 21:22:04] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[10/31/24 21:22:06] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[10/31/24 21:22:06] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[10/31/24 21:22:06] crowsnest:		[crowsnest]
+[10/31/24 21:22:06] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[10/31/24 21:22:06] crowsnest:		log_level: verbose
+[10/31/24 21:22:06] crowsnest:		delete_log: false
+[10/31/24 21:22:06] crowsnest:		no_proxy: false
+[10/31/24 21:22:06] crowsnest:		
+[10/31/24 21:22:06] crowsnest:		[cam 1]
+[10/31/24 21:22:06] crowsnest:		mode: ustreamer
+[10/31/24 21:22:06] crowsnest:		
+[10/31/24 21:22:06] crowsnest:		enable_rtsp: false
+[10/31/24 21:22:06] crowsnest:		rtsp_port: 8554
+[10/31/24 21:22:06] crowsnest:		port: 8080
+[10/31/24 21:22:06] crowsnest:		device: /dev/video0
+[10/31/24 21:22:06] crowsnest:		resolution: 640x480
+[10/31/24 21:22:06] crowsnest:		max_fps: 15
+[10/31/24 21:22:06] crowsnest: INFO: Detect available Devices
+[10/31/24 21:22:07] crowsnest: INFO: Found 1 total available Device(s)
+[10/31/24 21:22:07] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[10/31/24 21:22:07] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[10/31/24 21:22:07] crowsnest: Supported Formats:
+[10/31/24 21:22:07] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 640x360
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 1280x720
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 1920x1080
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/31/24 21:22:07] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 640x360
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 1280x720
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 1920x1080
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[10/31/24 21:22:07] crowsnest:		[2]: 'H264' (H.264, compressed)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 640x360
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 1280x720
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/31/24 21:22:07] crowsnest:		Size: Discrete 1920x1080
+[10/31/24 21:22:07] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[10/31/24 21:22:07] crowsnest: Supported Controls:
+[10/31/24 21:22:07] crowsnest:		
+[10/31/24 21:22:07] crowsnest:		User Controls
+[10/31/24 21:22:07] crowsnest:		
+[10/31/24 21:22:07] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/31/24 21:22:07] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/31/24 21:22:07] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[10/31/24 21:22:07] crowsnest: Try to start configured Cams / Services...
+[10/31/24 21:22:11] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[10/31/24 21:22:12] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[10/31/24 21:22:17] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[10/31/24 21:22:18] crowsnest:  ... Done!
+[11/03/24 16:50:55] crowsnest: Shutdown or Killed by User!
+[11/03/24 16:50:55] crowsnest: Please come again :)
+[11/03/24 16:50:55] crowsnest: Goodbye...
+[11/03/24 16:51:14] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/03/24 16:51:14] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/03/24 16:51:14] crowsnest: Prepare Startup ...
+[11/03/24 16:51:14] crowsnest: INFO: Host information:
+[11/03/24 16:51:14] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/03/24 16:51:14] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/03/24 16:51:15] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/03/24 16:51:15] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[11/03/24 16:51:15] crowsnest: Host Info: Available CPU Cores: 4
+[11/03/24 16:51:15] crowsnest: Host Info: Available Memory: 931432 kB
+[11/03/24 16:51:15] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/03/24 16:51:15] crowsnest: INFO: Checking Dependencies
+[11/03/24 16:51:15] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/03/24 16:51:16] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/03/24 16:51:16] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/03/24 16:51:16] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/03/24 16:51:16] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/03/24 16:51:16] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/03/24 16:51:19] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/03/24 16:51:19] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/03/24 16:51:19] crowsnest:		[crowsnest]
+[11/03/24 16:51:19] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/03/24 16:51:19] crowsnest:		log_level: verbose
+[11/03/24 16:51:19] crowsnest:		delete_log: false
+[11/03/24 16:51:19] crowsnest:		no_proxy: false
+[11/03/24 16:51:19] crowsnest:		
+[11/03/24 16:51:19] crowsnest:		[cam 1]
+[11/03/24 16:51:19] crowsnest:		mode: ustreamer
+[11/03/24 16:51:19] crowsnest:		
+[11/03/24 16:51:19] crowsnest:		enable_rtsp: false
+[11/03/24 16:51:19] crowsnest:		rtsp_port: 8554
+[11/03/24 16:51:19] crowsnest:		port: 8080
+[11/03/24 16:51:19] crowsnest:		device: /dev/video0
+[11/03/24 16:51:19] crowsnest:		resolution: 640x480
+[11/03/24 16:51:19] crowsnest:		max_fps: 15
+[11/03/24 16:51:19] crowsnest: INFO: Detect available Devices
+[11/03/24 16:51:20] crowsnest: INFO: Found 1 total available Device(s)
+[11/03/24 16:51:20] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/03/24 16:51:20] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/03/24 16:51:20] crowsnest: Supported Formats:
+[11/03/24 16:51:20] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 640x360
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 1280x720
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 1920x1080
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/03/24 16:51:20] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 640x360
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 1280x720
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 1920x1080
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/03/24 16:51:20] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 640x360
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 1280x720
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/03/24 16:51:20] crowsnest:		Size: Discrete 1920x1080
+[11/03/24 16:51:20] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/03/24 16:51:20] crowsnest: Supported Controls:
+[11/03/24 16:51:20] crowsnest:		
+[11/03/24 16:51:20] crowsnest:		User Controls
+[11/03/24 16:51:20] crowsnest:		
+[11/03/24 16:51:20] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/03/24 16:51:20] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/03/24 16:51:20] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/03/24 16:51:21] crowsnest: Try to start configured Cams / Services...
+[11/03/24 16:51:25] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/03/24 16:51:27] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/03/24 16:51:46] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/03/24 16:51:46] crowsnest:  ... Done!
+[11/04/24 20:44:55] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/04/24 20:44:56] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/04/24 20:44:56] crowsnest: Prepare Startup ...
+[11/04/24 20:44:56] crowsnest: INFO: Host information:
+[11/04/24 20:44:56] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/04/24 20:44:56] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/04/24 20:44:56] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/04/24 20:44:56] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[11/04/24 20:44:56] crowsnest: Host Info: Available CPU Cores: 4
+[11/04/24 20:44:56] crowsnest: Host Info: Available Memory: 931432 kB
+[11/04/24 20:44:56] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/04/24 20:44:56] crowsnest: INFO: Checking Dependencies
+[11/04/24 20:44:57] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/04/24 20:44:57] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/04/24 20:44:57] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/04/24 20:44:57] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/04/24 20:44:57] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/04/24 20:44:57] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/04/24 20:45:00] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/04/24 20:45:00] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/04/24 20:45:00] crowsnest:		[crowsnest]
+[11/04/24 20:45:00] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/04/24 20:45:00] crowsnest:		log_level: verbose
+[11/04/24 20:45:00] crowsnest:		delete_log: false
+[11/04/24 20:45:00] crowsnest:		no_proxy: false
+[11/04/24 20:45:00] crowsnest:		
+[11/04/24 20:45:00] crowsnest:		[cam 1]
+[11/04/24 20:45:00] crowsnest:		mode: ustreamer
+[11/04/24 20:45:00] crowsnest:		
+[11/04/24 20:45:00] crowsnest:		enable_rtsp: false
+[11/04/24 20:45:00] crowsnest:		rtsp_port: 8554
+[11/04/24 20:45:00] crowsnest:		port: 8080
+[11/04/24 20:45:00] crowsnest:		device: /dev/video0
+[11/04/24 20:45:00] crowsnest:		resolution: 640x480
+[11/04/24 20:45:00] crowsnest:		max_fps: 15
+[11/04/24 20:45:00] crowsnest: INFO: Detect available Devices
+[11/04/24 20:45:01] crowsnest: INFO: Found 1 total available Device(s)
+[11/04/24 20:45:01] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/04/24 20:45:01] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/04/24 20:45:01] crowsnest: Supported Formats:
+[11/04/24 20:45:01] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 640x360
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 1280x720
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 1920x1080
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/04/24 20:45:01] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 640x360
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 1280x720
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 1920x1080
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/04/24 20:45:01] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 640x360
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 1280x720
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/04/24 20:45:01] crowsnest:		Size: Discrete 1920x1080
+[11/04/24 20:45:01] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/04/24 20:45:01] crowsnest: Supported Controls:
+[11/04/24 20:45:01] crowsnest:		
+[11/04/24 20:45:01] crowsnest:		User Controls
+[11/04/24 20:45:01] crowsnest:		
+[11/04/24 20:45:01] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/04/24 20:45:01] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/04/24 20:45:01] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/04/24 20:45:01] crowsnest: Try to start configured Cams / Services...
+[11/04/24 20:45:05] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/04/24 20:45:06] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/04/24 20:45:11] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/04/24 20:45:12] crowsnest:  ... Done!
+[11/05/24 19:47:51] crowsnest: Shutdown or Killed by User!
+[11/05/24 19:47:51] crowsnest: Please come again :)
+[11/05/24 19:47:51] crowsnest: Goodbye...
+[11/05/24 19:48:14] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/05/24 19:48:14] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/05/24 19:48:14] crowsnest: Prepare Startup ...
+[11/05/24 19:48:15] crowsnest: INFO: Host information:
+[11/05/24 19:48:15] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/05/24 19:48:15] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/05/24 19:48:15] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/05/24 19:48:15] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[11/05/24 19:48:15] crowsnest: Host Info: Available CPU Cores: 4
+[11/05/24 19:48:15] crowsnest: Host Info: Available Memory: 931432 kB
+[11/05/24 19:48:15] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/05/24 19:48:15] crowsnest: INFO: Checking Dependencies
+[11/05/24 19:48:15] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/05/24 19:48:15] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/05/24 19:48:15] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/05/24 19:48:15] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/05/24 19:48:16] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/05/24 19:48:16] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/05/24 19:48:18] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/05/24 19:48:18] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/05/24 19:48:18] crowsnest:		[crowsnest]
+[11/05/24 19:48:18] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/05/24 19:48:18] crowsnest:		log_level: verbose
+[11/05/24 19:48:18] crowsnest:		delete_log: false
+[11/05/24 19:48:18] crowsnest:		no_proxy: false
+[11/05/24 19:48:18] crowsnest:		
+[11/05/24 19:48:18] crowsnest:		[cam 1]
+[11/05/24 19:48:18] crowsnest:		mode: ustreamer
+[11/05/24 19:48:18] crowsnest:		
+[11/05/24 19:48:18] crowsnest:		enable_rtsp: false
+[11/05/24 19:48:18] crowsnest:		rtsp_port: 8554
+[11/05/24 19:48:18] crowsnest:		port: 8080
+[11/05/24 19:48:18] crowsnest:		device: /dev/video0
+[11/05/24 19:48:18] crowsnest:		resolution: 640x480
+[11/05/24 19:48:18] crowsnest:		max_fps: 15
+[11/05/24 19:48:18] crowsnest: INFO: Detect available Devices
+[11/05/24 19:48:19] crowsnest: INFO: Found 1 total available Device(s)
+[11/05/24 19:48:19] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/05/24 19:48:19] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/05/24 19:48:19] crowsnest: Supported Formats:
+[11/05/24 19:48:19] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 640x360
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 1280x720
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 1920x1080
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/05/24 19:48:19] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 640x360
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 1280x720
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 1920x1080
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/05/24 19:48:19] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 640x360
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 1280x720
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/05/24 19:48:19] crowsnest:		Size: Discrete 1920x1080
+[11/05/24 19:48:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/05/24 19:48:19] crowsnest: Supported Controls:
+[11/05/24 19:48:19] crowsnest:		
+[11/05/24 19:48:19] crowsnest:		User Controls
+[11/05/24 19:48:19] crowsnest:		
+[11/05/24 19:48:19] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/05/24 19:48:19] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/05/24 19:48:19] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/05/24 19:48:19] crowsnest: Try to start configured Cams / Services...
+[11/05/24 19:48:23] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/05/24 19:48:25] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/08/24 18:18:49] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/08/24 18:18:49] crowsnest:  ... Done!
+[11/08/24 21:11:41] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/08/24 21:11:42] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/08/24 21:11:42] crowsnest: Prepare Startup ...
+[11/08/24 21:11:42] crowsnest: INFO: Host information:
+[11/08/24 21:11:42] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/08/24 21:11:42] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/08/24 21:11:42] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/08/24 21:11:42] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[11/08/24 21:11:42] crowsnest: Host Info: Available CPU Cores: 4
+[11/08/24 21:11:42] crowsnest: Host Info: Available Memory: 931432 kB
+[11/08/24 21:11:42] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/08/24 21:11:42] crowsnest: INFO: Checking Dependencies
+[11/08/24 21:11:42] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/08/24 21:11:43] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/08/24 21:11:43] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/08/24 21:11:43] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/08/24 21:11:43] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/08/24 21:11:43] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/08/24 21:11:45] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/08/24 21:11:45] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/08/24 21:11:45] crowsnest:		[crowsnest]
+[11/08/24 21:11:45] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/08/24 21:11:45] crowsnest:		log_level: verbose
+[11/08/24 21:11:45] crowsnest:		delete_log: false
+[11/08/24 21:11:45] crowsnest:		no_proxy: false
+[11/08/24 21:11:45] crowsnest:		
+[11/08/24 21:11:45] crowsnest:		[cam 1]
+[11/08/24 21:11:45] crowsnest:		mode: ustreamer
+[11/08/24 21:11:45] crowsnest:		
+[11/08/24 21:11:45] crowsnest:		enable_rtsp: false
+[11/08/24 21:11:45] crowsnest:		rtsp_port: 8554
+[11/08/24 21:11:45] crowsnest:		port: 8080
+[11/08/24 21:11:45] crowsnest:		device: /dev/video0
+[11/08/24 21:11:45] crowsnest:		resolution: 640x480
+[11/08/24 21:11:45] crowsnest:		max_fps: 15
+[11/08/24 21:11:45] crowsnest: INFO: Detect available Devices
+[11/08/24 21:11:46] crowsnest: INFO: Found 1 total available Device(s)
+[11/08/24 21:11:46] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/08/24 21:11:46] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/08/24 21:11:46] crowsnest: Supported Formats:
+[11/08/24 21:11:46] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 640x360
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 1280x720
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 1920x1080
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 21:11:46] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 640x360
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 1280x720
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 1920x1080
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/08/24 21:11:46] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 640x360
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 1280x720
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 21:11:46] crowsnest:		Size: Discrete 1920x1080
+[11/08/24 21:11:46] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 21:11:46] crowsnest: Supported Controls:
+[11/08/24 21:11:46] crowsnest:		
+[11/08/24 21:11:46] crowsnest:		User Controls
+[11/08/24 21:11:46] crowsnest:		
+[11/08/24 21:11:46] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/08/24 21:11:46] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/08/24 21:11:46] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/08/24 21:11:46] crowsnest: Try to start configured Cams / Services...
+[11/08/24 21:11:50] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/08/24 21:11:51] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/08/24 21:11:57] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/08/24 21:11:58] crowsnest:  ... Done!
+[11/08/24 23:25:09] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/08/24 23:25:10] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/08/24 23:25:10] crowsnest: Prepare Startup ...
+[11/08/24 23:25:10] crowsnest: INFO: Host information:
+[11/08/24 23:25:10] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/08/24 23:25:10] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/08/24 23:25:10] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/08/24 23:25:10] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[11/08/24 23:25:10] crowsnest: Host Info: Available CPU Cores: 4
+[11/08/24 23:25:10] crowsnest: Host Info: Available Memory: 931432 kB
+[11/08/24 23:25:10] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/08/24 23:25:11] crowsnest: INFO: Checking Dependencies
+[11/08/24 23:25:11] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/08/24 23:25:11] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/08/24 23:25:11] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/08/24 23:25:11] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/08/24 23:25:11] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/08/24 23:25:11] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/08/24 23:25:13] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/08/24 23:25:13] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/08/24 23:25:13] crowsnest:		[crowsnest]
+[11/08/24 23:25:13] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/08/24 23:25:13] crowsnest:		log_level: verbose
+[11/08/24 23:25:13] crowsnest:		delete_log: false
+[11/08/24 23:25:13] crowsnest:		no_proxy: false
+[11/08/24 23:25:13] crowsnest:		
+[11/08/24 23:25:13] crowsnest:		[cam 1]
+[11/08/24 23:25:13] crowsnest:		mode: ustreamer
+[11/08/24 23:25:13] crowsnest:		
+[11/08/24 23:25:13] crowsnest:		enable_rtsp: false
+[11/08/24 23:25:13] crowsnest:		rtsp_port: 8554
+[11/08/24 23:25:13] crowsnest:		port: 8080
+[11/08/24 23:25:13] crowsnest:		device: /dev/video0
+[11/08/24 23:25:13] crowsnest:		resolution: 640x480
+[11/08/24 23:25:13] crowsnest:		max_fps: 15
+[11/08/24 23:25:13] crowsnest: INFO: Detect available Devices
+[11/08/24 23:25:14] crowsnest: INFO: Found 1 total available Device(s)
+[11/08/24 23:25:14] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/08/24 23:25:14] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/08/24 23:25:14] crowsnest: Supported Formats:
+[11/08/24 23:25:14] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 640x360
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 1280x720
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 1920x1080
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 23:25:14] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 640x360
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 1280x720
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 1920x1080
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/08/24 23:25:14] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 640x360
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 1280x720
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 23:25:14] crowsnest:		Size: Discrete 1920x1080
+[11/08/24 23:25:14] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/08/24 23:25:14] crowsnest: Supported Controls:
+[11/08/24 23:25:14] crowsnest:		
+[11/08/24 23:25:14] crowsnest:		User Controls
+[11/08/24 23:25:14] crowsnest:		
+[11/08/24 23:25:14] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/08/24 23:25:14] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/08/24 23:25:14] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/08/24 23:25:14] crowsnest: Try to start configured Cams / Services...
+[11/08/24 23:25:18] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/08/24 23:25:20] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/08/24 23:25:24] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/08/24 23:25:25] crowsnest:  ... Done!
+[11/09/24 16:27:11] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/09/24 16:27:12] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/09/24 16:27:12] crowsnest: Prepare Startup ...
+[11/09/24 16:27:12] crowsnest: INFO: Host information:
+[11/09/24 16:27:12] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/09/24 16:27:12] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/09/24 16:27:12] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/09/24 16:27:12] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Rev 1.2
+[11/09/24 16:27:12] crowsnest: Host Info: Available CPU Cores: 4
+[11/09/24 16:27:13] crowsnest: Host Info: Available Memory: 931432 kB
+[11/09/24 16:27:13] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/09/24 16:27:13] crowsnest: INFO: Checking Dependencies
+[11/09/24 16:27:13] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/09/24 16:27:13] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/09/24 16:27:14] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/09/24 16:27:14] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/09/24 16:27:14] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/09/24 16:27:14] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/09/24 16:27:17] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/09/24 16:27:17] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/09/24 16:27:17] crowsnest:		[crowsnest]
+[11/09/24 16:27:17] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/09/24 16:27:17] crowsnest:		log_level: verbose
+[11/09/24 16:27:17] crowsnest:		delete_log: false
+[11/09/24 16:27:17] crowsnest:		no_proxy: false
+[11/09/24 16:27:17] crowsnest:		
+[11/09/24 16:27:17] crowsnest:		[cam 1]
+[11/09/24 16:27:17] crowsnest:		mode: ustreamer
+[11/09/24 16:27:17] crowsnest:		
+[11/09/24 16:27:17] crowsnest:		enable_rtsp: false
+[11/09/24 16:27:17] crowsnest:		rtsp_port: 8554
+[11/09/24 16:27:17] crowsnest:		port: 8080
+[11/09/24 16:27:17] crowsnest:		device: /dev/video0
+[11/09/24 16:27:17] crowsnest:		resolution: 640x480
+[11/09/24 16:27:17] crowsnest:		max_fps: 15
+[11/09/24 16:27:18] crowsnest: INFO: Detect available Devices
+[11/09/24 16:27:19] crowsnest: INFO: Found 1 total available Device(s)
+[11/09/24 16:27:19] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/09/24 16:27:19] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/09/24 16:27:19] crowsnest: Supported Formats:
+[11/09/24 16:27:19] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 640x360
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 1280x720
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:27:19] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 640x360
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 1280x720
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 16:27:19] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 640x360
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 1280x720
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:27:19] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 16:27:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:27:19] crowsnest: Supported Controls:
+[11/09/24 16:27:19] crowsnest:		
+[11/09/24 16:27:19] crowsnest:		User Controls
+[11/09/24 16:27:19] crowsnest:		
+[11/09/24 16:27:19] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 16:27:19] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 16:27:19] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 16:27:19] crowsnest: Try to start configured Cams / Services...
+[11/09/24 16:32:45] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/09/24 16:32:48] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/09/24 16:32:57] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/09/24 16:32:57] crowsnest:  ... Done!
+[11/09/24 16:33:38] crowsnest: Shutdown or Killed by User!
+[11/09/24 16:33:38] crowsnest: Please come again :)
+[11/09/24 16:33:38] crowsnest: Goodbye...
+[11/09/24 16:33:56] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/09/24 16:33:57] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/09/24 16:33:57] crowsnest: Prepare Startup ...
+[11/09/24 16:33:57] crowsnest: INFO: Host information:
+[11/09/24 16:33:57] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/09/24 16:33:57] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/09/24 16:33:57] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/09/24 16:33:57] crowsnest: Host Info: Model:  Raspberry Pi 4 Model B Rev 1.5
+[11/09/24 16:33:57] crowsnest: Host Info: Available CPU Cores: 4
+[11/09/24 16:33:57] crowsnest: Host Info: Available Memory: 1893592 kB
+[11/09/24 16:33:57] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/09/24 16:33:57] crowsnest: INFO: Checking Dependencies
+[11/09/24 16:33:57] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/09/24 16:33:57] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/09/24 16:33:57] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/09/24 16:33:57] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/09/24 16:33:57] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/09/24 16:33:57] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/09/24 16:33:58] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/09/24 16:33:58] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/09/24 16:33:58] crowsnest:		[crowsnest]
+[11/09/24 16:33:58] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/09/24 16:33:58] crowsnest:		log_level: verbose
+[11/09/24 16:33:58] crowsnest:		delete_log: false
+[11/09/24 16:33:58] crowsnest:		no_proxy: false
+[11/09/24 16:33:58] crowsnest:		
+[11/09/24 16:33:58] crowsnest:		[cam 1]
+[11/09/24 16:33:58] crowsnest:		mode: ustreamer
+[11/09/24 16:33:58] crowsnest:		
+[11/09/24 16:33:58] crowsnest:		enable_rtsp: false
+[11/09/24 16:33:58] crowsnest:		rtsp_port: 8554
+[11/09/24 16:33:58] crowsnest:		port: 8080
+[11/09/24 16:33:58] crowsnest:		device: /dev/video0
+[11/09/24 16:33:58] crowsnest:		resolution: 640x480
+[11/09/24 16:33:58] crowsnest:		max_fps: 15
+[11/09/24 16:33:58] crowsnest: INFO: Detect available Devices
+[11/09/24 16:33:58] crowsnest: INFO: Found 1 total available Device(s)
+[11/09/24 16:33:58] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/09/24 16:33:58] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/09/24 16:33:59] crowsnest: Supported Formats:
+[11/09/24 16:33:59] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 640x360
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 1280x720
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:33:59] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 640x360
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 1280x720
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 16:33:59] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 640x360
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 1280x720
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:33:59] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 16:33:59] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 16:33:59] crowsnest: Supported Controls:
+[11/09/24 16:33:59] crowsnest:		
+[11/09/24 16:33:59] crowsnest:		User Controls
+[11/09/24 16:33:59] crowsnest:		
+[11/09/24 16:33:59] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 16:33:59] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 16:33:59] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 16:33:59] crowsnest: Try to start configured Cams / Services...
+[11/09/24 16:34:00] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/09/24 16:34:01] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/09/24 16:34:02] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/09/24 16:34:04] crowsnest:  ... Done!
+[11/09/24 17:41:06] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/09/24 17:41:06] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/09/24 17:41:06] crowsnest: Prepare Startup ...
+[11/09/24 17:41:06] crowsnest: INFO: Host information:
+[11/09/24 17:41:06] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/09/24 17:41:06] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/09/24 17:41:07] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/09/24 17:41:07] crowsnest: Host Info: Model:  Raspberry Pi 4 Model B Rev 1.5
+[11/09/24 17:41:07] crowsnest: Host Info: Available CPU Cores: 4
+[11/09/24 17:41:07] crowsnest: Host Info: Available Memory: 1893592 kB
+[11/09/24 17:41:07] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/09/24 17:41:07] crowsnest: INFO: Checking Dependencies
+[11/09/24 17:41:07] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/09/24 17:41:07] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/09/24 17:41:07] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/09/24 17:41:07] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/09/24 17:41:07] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/09/24 17:41:07] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/09/24 17:41:08] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/09/24 17:41:08] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/09/24 17:41:08] crowsnest:		[crowsnest]
+[11/09/24 17:41:08] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/09/24 17:41:08] crowsnest:		log_level: verbose
+[11/09/24 17:41:08] crowsnest:		delete_log: false
+[11/09/24 17:41:08] crowsnest:		no_proxy: false
+[11/09/24 17:41:08] crowsnest:		
+[11/09/24 17:41:08] crowsnest:		[cam 1]
+[11/09/24 17:41:08] crowsnest:		mode: ustreamer
+[11/09/24 17:41:08] crowsnest:		
+[11/09/24 17:41:08] crowsnest:		enable_rtsp: false
+[11/09/24 17:41:08] crowsnest:		rtsp_port: 8554
+[11/09/24 17:41:08] crowsnest:		port: 8080
+[11/09/24 17:41:08] crowsnest:		device: /dev/video0
+[11/09/24 17:41:08] crowsnest:		resolution: 640x480
+[11/09/24 17:41:08] crowsnest:		max_fps: 15
+[11/09/24 17:41:08] crowsnest: INFO: Detect available Devices
+[11/09/24 17:41:08] crowsnest: INFO: Found 1 total available Device(s)
+[11/09/24 17:41:08] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/09/24 17:41:08] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/09/24 17:41:08] crowsnest: Supported Formats:
+[11/09/24 17:41:08] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 640x360
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 1280x720
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 17:41:08] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 640x360
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 1280x720
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 17:41:08] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 640x360
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 1280x720
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 17:41:08] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 17:41:08] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 17:41:08] crowsnest: Supported Controls:
+[11/09/24 17:41:08] crowsnest:		
+[11/09/24 17:41:08] crowsnest:		User Controls
+[11/09/24 17:41:08] crowsnest:		
+[11/09/24 17:41:08] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 17:41:08] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 17:41:08] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 17:41:08] crowsnest: Try to start configured Cams / Services...
+[11/09/24 17:41:10] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/09/24 17:41:11] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/09/24 17:41:12] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/09/24 17:41:14] crowsnest:  ... Done!
+[11/09/24 22:00:58] crowsnest: Shutdown or Killed by User!
+[11/09/24 22:00:58] crowsnest: Please come again :)
+[11/09/24 22:00:58] crowsnest: Goodbye...
+[11/09/24 22:01:17] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/09/24 22:01:17] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/09/24 22:01:17] crowsnest: Prepare Startup ...
+[11/09/24 22:01:17] crowsnest: INFO: Host information:
+[11/09/24 22:01:17] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/09/24 22:01:17] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/09/24 22:01:17] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/09/24 22:01:17] crowsnest: Host Info: Model:  Raspberry Pi 4 Model B Rev 1.5
+[11/09/24 22:01:17] crowsnest: Host Info: Available CPU Cores: 4
+[11/09/24 22:01:17] crowsnest: Host Info: Available Memory: 1893592 kB
+[11/09/24 22:01:17] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/09/24 22:01:17] crowsnest: INFO: Checking Dependencies
+[11/09/24 22:01:17] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/09/24 22:01:17] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/09/24 22:01:17] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/09/24 22:01:17] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/09/24 22:01:17] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/09/24 22:01:17] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/09/24 22:01:18] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/09/24 22:01:18] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/09/24 22:01:18] crowsnest:		[crowsnest]
+[11/09/24 22:01:18] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/09/24 22:01:18] crowsnest:		log_level: verbose
+[11/09/24 22:01:18] crowsnest:		delete_log: false
+[11/09/24 22:01:18] crowsnest:		no_proxy: false
+[11/09/24 22:01:18] crowsnest:		
+[11/09/24 22:01:18] crowsnest:		[cam 1]
+[11/09/24 22:01:18] crowsnest:		mode: ustreamer
+[11/09/24 22:01:18] crowsnest:		
+[11/09/24 22:01:18] crowsnest:		enable_rtsp: false
+[11/09/24 22:01:18] crowsnest:		rtsp_port: 8554
+[11/09/24 22:01:18] crowsnest:		port: 8080
+[11/09/24 22:01:18] crowsnest:		device: /dev/video0
+[11/09/24 22:01:18] crowsnest:		resolution: 640x480
+[11/09/24 22:01:18] crowsnest:		max_fps: 15
+[11/09/24 22:01:18] crowsnest: INFO: Detect available Devices
+[11/09/24 22:01:19] crowsnest: INFO: Found 1 total available Device(s)
+[11/09/24 22:01:19] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/09/24 22:01:19] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/09/24 22:01:19] crowsnest: Supported Formats:
+[11/09/24 22:01:19] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 640x360
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 1280x720
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:01:19] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 640x360
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 1280x720
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 22:01:19] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 640x360
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 1280x720
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:01:19] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 22:01:19] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:01:19] crowsnest: Supported Controls:
+[11/09/24 22:01:19] crowsnest:		
+[11/09/24 22:01:19] crowsnest:		User Controls
+[11/09/24 22:01:19] crowsnest:		
+[11/09/24 22:01:19] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 22:01:19] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 22:01:19] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 22:01:19] crowsnest: Try to start configured Cams / Services...
+[11/09/24 22:01:21] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/09/24 22:01:21] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/09/24 22:01:24] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/09/24 22:01:25] crowsnest:  ... Done!
+[11/09/24 22:19:10] crowsnest: Shutdown or Killed by User!
+[11/09/24 22:19:10] crowsnest: Please come again :)
+[11/09/24 22:19:10] crowsnest: Goodbye...
+[11/09/24 22:19:29] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/09/24 22:19:29] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/09/24 22:19:29] crowsnest: Prepare Startup ...
+[11/09/24 22:19:29] crowsnest: INFO: Host information:
+[11/09/24 22:19:29] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/09/24 22:19:29] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/09/24 22:19:29] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/09/24 22:19:29] crowsnest: Host Info: Model:  Raspberry Pi 4 Model B Rev 1.5
+[11/09/24 22:19:30] crowsnest: Host Info: Available CPU Cores: 4
+[11/09/24 22:19:30] crowsnest: Host Info: Available Memory: 1893592 kB
+[11/09/24 22:19:30] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/09/24 22:19:30] crowsnest: INFO: Checking Dependencies
+[11/09/24 22:19:30] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/09/24 22:19:30] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/09/24 22:19:30] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/09/24 22:19:30] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/09/24 22:19:30] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/09/24 22:19:30] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/09/24 22:19:31] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/09/24 22:19:31] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/09/24 22:19:31] crowsnest:		[crowsnest]
+[11/09/24 22:19:31] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/09/24 22:19:31] crowsnest:		log_level: verbose
+[11/09/24 22:19:31] crowsnest:		delete_log: false
+[11/09/24 22:19:31] crowsnest:		no_proxy: false
+[11/09/24 22:19:31] crowsnest:		
+[11/09/24 22:19:31] crowsnest:		[cam 1]
+[11/09/24 22:19:31] crowsnest:		mode: ustreamer
+[11/09/24 22:19:31] crowsnest:		
+[11/09/24 22:19:31] crowsnest:		enable_rtsp: false
+[11/09/24 22:19:31] crowsnest:		rtsp_port: 8554
+[11/09/24 22:19:31] crowsnest:		port: 8080
+[11/09/24 22:19:31] crowsnest:		device: /dev/video0
+[11/09/24 22:19:31] crowsnest:		resolution: 640x480
+[11/09/24 22:19:31] crowsnest:		max_fps: 15
+[11/09/24 22:19:31] crowsnest: INFO: Detect available Devices
+[11/09/24 22:19:31] crowsnest: INFO: Found 1 total available Device(s)
+[11/09/24 22:19:31] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/09/24 22:19:31] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/09/24 22:19:31] crowsnest: Supported Formats:
+[11/09/24 22:19:31] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 640x360
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 1280x720
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:19:31] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 640x360
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 1280x720
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/09/24 22:19:31] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 640x360
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 1280x720
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:19:31] crowsnest:		Size: Discrete 1920x1080
+[11/09/24 22:19:31] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/09/24 22:19:31] crowsnest: Supported Controls:
+[11/09/24 22:19:31] crowsnest:		
+[11/09/24 22:19:31] crowsnest:		User Controls
+[11/09/24 22:19:31] crowsnest:		
+[11/09/24 22:19:31] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 22:19:31] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 22:19:31] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/09/24 22:19:32] crowsnest: Try to start configured Cams / Services...
+[11/09/24 22:19:33] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/09/24 22:19:34] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/09/24 22:19:36] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/09/24 22:19:38] crowsnest:  ... Done!
+[11/10/24 09:28:33] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/10/24 09:28:33] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/10/24 09:28:33] crowsnest: Prepare Startup ...
+[11/10/24 09:28:33] crowsnest: INFO: Host information:
+[11/10/24 09:28:33] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/10/24 09:28:34] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/10/24 09:28:34] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/10/24 09:28:34] crowsnest: Host Info: Model:  Raspberry Pi 4 Model B Rev 1.5
+[11/10/24 09:28:34] crowsnest: Host Info: Available CPU Cores: 4
+[11/10/24 09:28:34] crowsnest: Host Info: Available Memory: 1893592 kB
+[11/10/24 09:28:34] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/10/24 09:28:34] crowsnest: INFO: Checking Dependencies
+[11/10/24 09:28:34] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/10/24 09:28:34] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/10/24 09:28:34] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/10/24 09:28:34] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/10/24 09:28:34] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/10/24 09:28:34] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/10/24 09:28:35] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/10/24 09:28:35] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/10/24 09:28:35] crowsnest:		[crowsnest]
+[11/10/24 09:28:35] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/10/24 09:28:35] crowsnest:		log_level: verbose
+[11/10/24 09:28:35] crowsnest:		delete_log: false
+[11/10/24 09:28:35] crowsnest:		no_proxy: false
+[11/10/24 09:28:35] crowsnest:		
+[11/10/24 09:28:35] crowsnest:		[cam 1]
+[11/10/24 09:28:35] crowsnest:		mode: ustreamer
+[11/10/24 09:28:35] crowsnest:		
+[11/10/24 09:28:35] crowsnest:		enable_rtsp: false
+[11/10/24 09:28:35] crowsnest:		rtsp_port: 8554
+[11/10/24 09:28:35] crowsnest:		port: 8080
+[11/10/24 09:28:35] crowsnest:		device: /dev/video0
+[11/10/24 09:28:35] crowsnest:		resolution: 640x480
+[11/10/24 09:28:35] crowsnest:		max_fps: 15
+[11/10/24 09:28:35] crowsnest: INFO: Detect available Devices
+[11/10/24 09:28:35] crowsnest: INFO: Found 1 total available Device(s)
+[11/10/24 09:28:35] crowsnest: Try to start configured Cams / Services...
+[11/10/24 09:28:37] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/10/24 09:28:38] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/10/24 09:28:40] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/10/24 09:28:42] crowsnest:  ... Done!
+[11/10/24 19:08:04] crowsnest: Shutdown or Killed by User!
+[11/10/24 19:08:04] crowsnest: Please come again :)
+[11/10/24 19:08:04] crowsnest: Goodbye...
+[11/10/24 19:08:25] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/10/24 19:08:26] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/10/24 19:08:26] crowsnest: Prepare Startup ...
+[11/10/24 19:08:26] crowsnest: INFO: Host information:
+[11/10/24 19:08:26] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/10/24 19:08:26] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/10/24 19:08:26] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/10/24 19:08:26] crowsnest: Host Info: Model:  Raspberry Pi 4 Model B Rev 1.5
+[11/10/24 19:08:26] crowsnest: Host Info: Available CPU Cores: 4
+[11/10/24 19:08:26] crowsnest: Host Info: Available Memory: 1893592 kB
+[11/10/24 19:08:26] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/10/24 19:08:26] crowsnest: INFO: Checking Dependencies
+[11/10/24 19:08:26] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/10/24 19:08:26] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/10/24 19:08:26] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/10/24 19:08:26] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/10/24 19:08:26] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/10/24 19:08:26] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/10/24 19:08:27] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/10/24 19:08:27] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/10/24 19:08:27] crowsnest:		[crowsnest]
+[11/10/24 19:08:27] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/10/24 19:08:27] crowsnest:		log_level: verbose
+[11/10/24 19:08:27] crowsnest:		delete_log: false
+[11/10/24 19:08:27] crowsnest:		no_proxy: false
+[11/10/24 19:08:27] crowsnest:		
+[11/10/24 19:08:27] crowsnest:		[cam 1]
+[11/10/24 19:08:27] crowsnest:		mode: ustreamer
+[11/10/24 19:08:27] crowsnest:		
+[11/10/24 19:08:27] crowsnest:		enable_rtsp: false
+[11/10/24 19:08:27] crowsnest:		rtsp_port: 8554
+[11/10/24 19:08:27] crowsnest:		port: 8080
+[11/10/24 19:08:27] crowsnest:		device: /dev/video0
+[11/10/24 19:08:27] crowsnest:		resolution: 640x480
+[11/10/24 19:08:27] crowsnest:		max_fps: 15
+[11/10/24 19:08:27] crowsnest: INFO: Detect available Devices
+[11/10/24 19:08:28] crowsnest: INFO: Found 1 total available Device(s)
+[11/10/24 19:08:28] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/10/24 19:08:28] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/10/24 19:08:28] crowsnest: Supported Formats:
+[11/10/24 19:08:28] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 640x360
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 1280x720
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 1920x1080
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/10/24 19:08:28] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 640x360
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 1280x720
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 1920x1080
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/10/24 19:08:28] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 640x360
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 1280x720
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/10/24 19:08:28] crowsnest:		Size: Discrete 1920x1080
+[11/10/24 19:08:28] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/10/24 19:08:28] crowsnest: Supported Controls:
+[11/10/24 19:08:28] crowsnest:		
+[11/10/24 19:08:28] crowsnest:		User Controls
+[11/10/24 19:08:28] crowsnest:		
+[11/10/24 19:08:28] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/10/24 19:08:28] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/10/24 19:08:28] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/10/24 19:08:28] crowsnest: Try to start configured Cams / Services...
+[11/10/24 19:08:30] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/10/24 19:08:30] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/10/24 19:08:33] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/10/24 19:08:34] crowsnest:  ... Done!
+[11/11/24 18:24:00] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[11/11/24 18:24:00] crowsnest: Version: v4.1.9-1-gd75a3ae
+[11/11/24 18:24:00] crowsnest: Prepare Startup ...
+[11/11/24 18:24:00] crowsnest: INFO: Host information:
+[11/11/24 18:24:00] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[11/11/24 18:24:00] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[11/11/24 18:24:00] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[11/11/24 18:24:00] crowsnest: Host Info: Model:  Raspberry Pi 4 Model B Rev 1.5
+[11/11/24 18:24:00] crowsnest: Host Info: Available CPU Cores: 4
+[11/11/24 18:24:00] crowsnest: Host Info: Available Memory: 1893592 kB
+[11/11/24 18:24:00] crowsnest: Host Info: Diskspace (avail. / total): 20G / 29G
+[11/11/24 18:24:00] crowsnest: INFO: Checking Dependencies
+[11/11/24 18:24:00] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[11/11/24 18:24:00] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[11/11/24 18:24:00] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[11/11/24 18:24:00] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[11/11/24 18:24:00] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[11/11/24 18:24:00] crowsnest: Version Control: ustreamer is up to date. (v5.48)
+[11/11/24 18:24:01] crowsnest: Version Control: camera-streamer is up to date. ((f1627aa))
+[11/11/24 18:24:01] crowsnest: INFO: Print Configfile: '/home/coon/printer_data/config/crowsnest.conf'
+[11/11/24 18:24:01] crowsnest:		[crowsnest]
+[11/11/24 18:24:01] crowsnest:		log_path: /home/coon/printer_data/logs/crowsnest.log
+[11/11/24 18:24:01] crowsnest:		log_level: verbose
+[11/11/24 18:24:01] crowsnest:		delete_log: false
+[11/11/24 18:24:01] crowsnest:		no_proxy: false
+[11/11/24 18:24:01] crowsnest:		
+[11/11/24 18:24:01] crowsnest:		[cam 1]
+[11/11/24 18:24:01] crowsnest:		mode: ustreamer
+[11/11/24 18:24:01] crowsnest:		
+[11/11/24 18:24:01] crowsnest:		enable_rtsp: false
+[11/11/24 18:24:01] crowsnest:		rtsp_port: 8554
+[11/11/24 18:24:01] crowsnest:		port: 8080
+[11/11/24 18:24:01] crowsnest:		device: /dev/video0
+[11/11/24 18:24:01] crowsnest:		resolution: 640x480
+[11/11/24 18:24:01] crowsnest:		max_fps: 15
+[11/11/24 18:24:01] crowsnest: INFO: Detect available Devices
+[11/11/24 18:24:02] crowsnest: INFO: Found 1 total available Device(s)
+[11/11/24 18:24:02] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[11/11/24 18:24:02] crowsnest: /dev/v4l/by-id/usb-Ingenic_Semiconductor_CO.__LTD._HD_USB_Camera_Ucamera001-video-index0 -> /dev/video0
+[11/11/24 18:24:02] crowsnest: Supported Formats:
+[11/11/24 18:24:02] crowsnest:		[0]: 'MJPG' (Motion-JPEG, compressed)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 640x360
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 1280x720
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 1920x1080
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/11/24 18:24:02] crowsnest:		[1]: 'YUYV' (YUYV 4:2:2)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 640x360
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 1280x720
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 1920x1080
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.200s (5.000 fps)
+[11/11/24 18:24:02] crowsnest:		[2]: 'H264' (H.264, compressed)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 640x360
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 1280x720
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/11/24 18:24:02] crowsnest:		Size: Discrete 1920x1080
+[11/11/24 18:24:02] crowsnest:		Interval: Discrete 0.033s (30.000 fps)
+[11/11/24 18:24:02] crowsnest: Supported Controls:
+[11/11/24 18:24:02] crowsnest:		
+[11/11/24 18:24:02] crowsnest:		User Controls
+[11/11/24 18:24:02] crowsnest:		
+[11/11/24 18:24:02] crowsnest:		brightness 0x00980900 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/11/24 18:24:02] crowsnest:		contrast 0x00980901 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/11/24 18:24:02] crowsnest:		saturation 0x00980902 (int)    : min=1 max=255 step=1 default=128 value=128
+[11/11/24 18:24:02] crowsnest: Try to start configured Cams / Services...
+[11/11/24 18:24:04] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue ...
+[11/11/24 18:24:04] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
+[11/11/24 18:24:07] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[11/11/24 18:24:09] crowsnest:  ... Done!
