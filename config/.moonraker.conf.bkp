@@ -28,10 +28,10 @@ trusted_clients =
 
 [announcements]
 subscriptions = 
-	octoapp.
+	mainsail
 
 [spoolman]
-server = http://192.168.50.51:7912
+server = http://192.168.50.52:7912
 sync_rate = 5
 
 [update_manager]
@@ -65,17 +65,6 @@ origin = https://github.com/mainsail-crew/sonar.git
 primary_branch = main
 managed_services = sonar
 install_script = tools/install.sh
-
-[update_manager octoapp]
-type = git_repo
-channel = beta
-path = /home/coon/octoapp
-origin = https://github.com/crysxd/OctoApp-Plugin.git
-env = /home/coon/octoapp-env/bin/python
-requirements = requirements.txt
-install_script = install.sh
-managed_services = 
-	octoapp
 
 [update_manager Klipper-Adaptive-Meshing-Purging]
 type = git_repo
