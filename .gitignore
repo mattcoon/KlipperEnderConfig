@@ -1,6 +1,6 @@
 *.gcode
 *.nc
-*.log
+*.log*
 .thumbs/*
 logs/*
 gcodes/*

@@ -31,7 +31,7 @@ subscriptions =
 	mainsail
 
 [spoolman]
-server = http://192.168.50.52:7912
+server = http://192.168.50.253:7912
 sync_rate = 5
 
 [update_manager]
